@@ -185,8 +185,8 @@ test_dataset = dataset[int(0.8 * len(dataset)):]
 
 # Create data loaders
 
-train_loader = DataLoader(train_dataset, batch_size=256, shuffle=True)
-test_loader = DataLoader(test_dataset, batch_size=256, shuffle=False)
+train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
+test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)
                        
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')

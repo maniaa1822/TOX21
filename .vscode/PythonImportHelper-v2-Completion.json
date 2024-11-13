@@ -451,7 +451,7 @@
         "kind": 5,
         "importPath": "GAT_tox21",
         "description": "GAT_tox21",
-        "peekOfCode": "dataset = MoleculeNet(root='data/TOX21', name='TOX21')\n# Split dataset into train and test 0.8\ntrain_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]\n# Create data loaders\ntrain_loader = DataLoader(train_dataset, batch_size=256, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=256, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GATTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)",
+        "peekOfCode": "dataset = MoleculeNet(root='data/TOX21', name='TOX21')\n# Split dataset into train and test 0.8\ntrain_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]\n# Create data loaders\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GATTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)",
         "detail": "GAT_tox21",
         "documentation": {}
     },
@@ -460,7 +460,7 @@
         "kind": 5,
         "importPath": "GAT_tox21",
         "description": "GAT_tox21",
-        "peekOfCode": "train_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]\n# Create data loaders\ntrain_loader = DataLoader(train_dataset, batch_size=256, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=256, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GATTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Print the 5 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")",
+        "peekOfCode": "train_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]\n# Create data loaders\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GATTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Print the 5 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")",
         "detail": "GAT_tox21",
         "documentation": {}
     },
@@ -469,7 +469,7 @@
         "kind": 5,
         "importPath": "GAT_tox21",
         "description": "GAT_tox21",
-        "peekOfCode": "test_dataset = dataset[int(0.8 * len(dataset)):]\n# Create data loaders\ntrain_loader = DataLoader(train_dataset, batch_size=256, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=256, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GATTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Print the 5 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")\ntask_names = [",
+        "peekOfCode": "test_dataset = dataset[int(0.8 * len(dataset)):]\n# Create data loaders\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GATTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Print the 5 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")\ntask_names = [",
         "detail": "GAT_tox21",
         "documentation": {}
     },
@@ -478,7 +478,7 @@
         "kind": 5,
         "importPath": "GAT_tox21",
         "description": "GAT_tox21",
-        "peekOfCode": "train_loader = DataLoader(train_dataset, batch_size=256, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=256, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GATTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Print the 5 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")\ntask_names = [\n    'NR-AR', 'NR-AR-LBD', 'NR-AhR', 'NR-Aromatase', 'NR-ER'\n]",
+        "peekOfCode": "train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GATTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Print the 5 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")\ntask_names = [\n    'NR-AR', 'NR-AR-LBD', 'NR-AhR', 'NR-Aromatase', 'NR-ER'\n]",
         "detail": "GAT_tox21",
         "documentation": {}
     },
@@ -487,7 +487,7 @@
         "kind": 5,
         "importPath": "GAT_tox21",
         "description": "GAT_tox21",
-        "peekOfCode": "test_loader = DataLoader(test_dataset, batch_size=256, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GATTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Print the 5 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")\ntask_names = [\n    'NR-AR', 'NR-AR-LBD', 'NR-AhR', 'NR-Aromatase', 'NR-ER'\n]\ntask_descriptions = [",
+        "peekOfCode": "test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GATTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Print the 5 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")\ntask_names = [\n    'NR-AR', 'NR-AR-LBD', 'NR-AhR', 'NR-Aromatase', 'NR-ER'\n]\ntask_descriptions = [",
         "detail": "GAT_tox21",
         "documentation": {}
     },
@@ -622,7 +622,7 @@
         "kind": 5,
         "importPath": "GCN_node_tox21",
         "description": "GCN_node_tox21",
-        "peekOfCode": "dataset = MoleculeNet(root='data/TOX21', name='TOX21')\n# Split dataset into train and test 0.8\ntrain_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]\n# Create data loaders\ntrain_loader = DataLoader(train_dataset, batch_size=256, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=256, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)",
+        "peekOfCode": "dataset = MoleculeNet(root='data/TOX21', name='TOX21')\n# Split dataset into train and test 0.8\ntrain_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]\n# Create data loaders\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)",
         "detail": "GCN_node_tox21",
         "documentation": {}
     },
@@ -631,7 +631,7 @@
         "kind": 5,
         "importPath": "GCN_node_tox21",
         "description": "GCN_node_tox21",
-        "peekOfCode": "train_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]\n# Create data loaders\ntrain_loader = DataLoader(train_dataset, batch_size=256, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=256, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'",
+        "peekOfCode": "train_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]\n# Create data loaders\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'",
         "detail": "GCN_node_tox21",
         "documentation": {}
     },
@@ -640,7 +640,7 @@
         "kind": 5,
         "importPath": "GCN_node_tox21",
         "description": "GCN_node_tox21",
-        "peekOfCode": "test_dataset = dataset[int(0.8 * len(dataset)):]\n# Create data loaders\ntrain_loader = DataLoader(train_dataset, batch_size=256, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=256, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:",
+        "peekOfCode": "test_dataset = dataset[int(0.8 * len(dataset)):]\n# Create data loaders\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:",
         "detail": "GCN_node_tox21",
         "documentation": {}
     },
@@ -649,7 +649,7 @@
         "kind": 5,
         "importPath": "GCN_node_tox21",
         "description": "GCN_node_tox21",
-        "peekOfCode": "train_loader = DataLoader(train_dataset, batch_size=256, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=256, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:\n    f.write(str(model))\n# Print the 5 toxicity tasks we're predicting along with their descriptions",
+        "peekOfCode": "train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:\n    f.write(str(model))\n# Print the 5 toxicity tasks we're predicting along with their descriptions",
         "detail": "GCN_node_tox21",
         "documentation": {}
     },
@@ -658,7 +658,7 @@
         "kind": 5,
         "importPath": "GCN_node_tox21",
         "description": "GCN_node_tox21",
-        "peekOfCode": "test_loader = DataLoader(test_dataset, batch_size=256, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:\n    f.write(str(model))\n# Print the 5 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")",
+        "peekOfCode": "test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:\n    f.write(str(model))\n# Print the 5 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")",
         "detail": "GCN_node_tox21",
         "documentation": {}
     },
@@ -991,7 +991,7 @@
         "kind": 5,
         "importPath": "NNConv_tox21",
         "description": "NNConv_tox21",
-        "peekOfCode": "dataset = MoleculeNet(root='data/TOX21', name='TOX21')\n# Split dataset into train and test 0.8\ntrain_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]\n# Create data loaders\ntrain_loader = DataLoader(train_dataset, batch_size=256, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=256, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21NNConv(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)",
+        "peekOfCode": "dataset = MoleculeNet(root='data/TOX21', name='TOX21')\n# Split dataset into train and test 0.8\ntrain_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]\n# Create data loaders\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21NNConv(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)",
         "detail": "NNConv_tox21",
         "documentation": {}
     },
@@ -1000,7 +1000,7 @@
         "kind": 5,
         "importPath": "NNConv_tox21",
         "description": "NNConv_tox21",
-        "peekOfCode": "train_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]\n# Create data loaders\ntrain_loader = DataLoader(train_dataset, batch_size=256, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=256, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21NNConv(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'",
+        "peekOfCode": "train_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]\n# Create data loaders\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21NNConv(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'",
         "detail": "NNConv_tox21",
         "documentation": {}
     },
@@ -1009,7 +1009,7 @@
         "kind": 5,
         "importPath": "NNConv_tox21",
         "description": "NNConv_tox21",
-        "peekOfCode": "test_dataset = dataset[int(0.8 * len(dataset)):]\n# Create data loaders\ntrain_loader = DataLoader(train_dataset, batch_size=256, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=256, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21NNConv(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:",
+        "peekOfCode": "test_dataset = dataset[int(0.8 * len(dataset)):]\n# Create data loaders\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21NNConv(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:",
         "detail": "NNConv_tox21",
         "documentation": {}
     },
@@ -1018,7 +1018,7 @@
         "kind": 5,
         "importPath": "NNConv_tox21",
         "description": "NNConv_tox21",
-        "peekOfCode": "train_loader = DataLoader(train_dataset, batch_size=256, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=256, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21NNConv(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:\n    f.write(str(model))\n# Print the 5 toxicity tasks we're predicting along with their descriptions",
+        "peekOfCode": "train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21NNConv(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:\n    f.write(str(model))\n# Print the 5 toxicity tasks we're predicting along with their descriptions",
         "detail": "NNConv_tox21",
         "documentation": {}
     },
@@ -1027,7 +1027,7 @@
         "kind": 5,
         "importPath": "NNConv_tox21",
         "description": "NNConv_tox21",
-        "peekOfCode": "test_loader = DataLoader(test_dataset, batch_size=256, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21NNConv(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:\n    f.write(str(model))\n# Print the 5 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")",
+        "peekOfCode": "test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21NNConv(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:\n    f.write(str(model))\n# Print the 5 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")",
         "detail": "NNConv_tox21",
         "documentation": {}
     },
