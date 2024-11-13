@@ -114,7 +114,7 @@ def calculate_metrics(y_true, y_pred, mask):
 
 # Create unique run name with timestamp
 current_time = datetime.datetime.now().strftime('%Y%m%d-%H%M%S')
-log_dir = f'runs/GCN_tox21_{current_time}'
+log_dir = f'runs/GCN_node_tox21_{current_time}'
 writer = SummaryWriter(log_dir)
 
 def train(model, train_loader, optimizer, device, epoch):
@@ -213,6 +213,11 @@ test_loader = DataLoader(test_dataset, batch_size=256, shuffle=False)
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model = GCNTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+
+# Save model summary
+model_summary_path = f'{log_dir}/model_summary.txt'
+with open(model_summary_path, 'w') as f:
+    f.write(str(model))
 
 # Print the 5 toxicity tasks we're predicting along with their descriptions
 print("Predicting the following toxicity tasks:")

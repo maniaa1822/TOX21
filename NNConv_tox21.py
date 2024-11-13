@@ -1,134 +1,79 @@
 import torch
 import torch.nn.functional as F
 from torch_geometric.datasets import MoleculeNet
-from torch_geometric.nn import GCNConv, global_mean_pool, EdgeConv, MessagePassing
+from torch_geometric.nn import GCNConv, global_mean_pool, EdgeConv,NNConv
 from sklearn.metrics import roc_auc_score
 import numpy as np
 from torch_geometric.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 import datetime
 
-
-class PairwiseEdgeConv(MessagePassing):
-    def __init__(self, in_channels, edge_channels, out_channels):
-        super(PairwiseEdgeConv, self).__init__(aggr='mean')
-        
-        # MLP for processing concatenated features
-        # Input: [node_i || node_j || edge_attr]
-        self.mlp = torch.nn.Sequential(
-            torch.nn.Linear(2 * in_channels + edge_channels, out_channels * 2),
-            torch.nn.ReLU(),
-            torch.nn.Linear(out_channels * 2, out_channels)
-        )
-
-    def forward(self, x, edge_index, edge_attr):
-        # x has shape [N, in_channels]
-        # edge_index has shape [2, E]
-        # edge_attr has shape [E, edge_channels]
-        return self.propagate(edge_index, x=x, edge_attr=edge_attr)
-
-    def message(self, x_i, x_j, edge_attr):
-        # x_i: Source node features [E, in_channels]
-        # x_j: Target node features [E, in_channels]
-        # edge_attr: Edge features [E, edge_channels]
-        
-        # Concatenate [source_node || target_node || edge_features]
-        out = torch.cat([x_i, x_j, edge_attr], dim=1)
-        
-        # Apply MLP to concatenated features
-        return self.mlp(out)
-    
-
-class GCNTox21(torch.nn.Module):
+class GCNTox21NNConv(torch.nn.Module):
     def __init__(self, num_node_features, num_edge_features):
-        super(GCNTox21, self).__init__()
-        
-        # Feature dimensions
-        self.node_hidden = 64
-        self.edge_hidden = 16
-        
+        super(GCNTox21NNConv, self).__init__()
         # Edge embedding layer
-        self.edge_embedding = torch.nn.Sequential(
-            torch.nn.Linear(num_edge_features, self.edge_hidden),
-            torch.nn.ReLU()
-        )
+        self.edge_embedding = torch.nn.Linear(num_edge_features, 32)
         
         # Node embedding layer
-        self.node_embedding = torch.nn.Sequential(
-            torch.nn.Linear(num_node_features, self.node_hidden),
-            torch.nn.ReLU()
+        self.node_embedding = torch.nn.Linear(num_node_features, 64)
+        
+        # Define MLPs for NNConv layers
+        self.mlp1 = torch.nn.Sequential(
+            torch.nn.Linear(32, 128),
+            torch.nn.ReLU(),
+            torch.nn.Linear(128, 64 * 64)
+        )
+        self.mlp2 = torch.nn.Sequential(
+            torch.nn.Linear(32, 128),
+            torch.nn.ReLU(),
+            torch.nn.Linear(128, 128 * 64)
+        )
+        self.mlp3 = torch.nn.Sequential(
+            torch.nn.Linear(32, 128),
+            torch.nn.ReLU(),
+            torch.nn.Linear(128, 32 * 128)
         )
         
-        # Pairwise Edge Convolution layers with dimensions
-        # Layer 1: node_hidden -> 128
-        self.conv1 = PairwiseEdgeConv(
-            in_channels=self.node_hidden,     # 64 per node
-            edge_channels=self.edge_hidden,   # 32 for edge
-            out_channels=64
-        )
-        
-        # Layer 2: 128 -> 64
-        self.conv2 = PairwiseEdgeConv(
-            in_channels=64,
-            edge_channels=self.edge_hidden,
-            out_channels=32
-        )
-        
-        # Layer 3: 64 -> 32
-        self.conv3 = PairwiseEdgeConv(
-            in_channels=32,
-            edge_channels=self.edge_hidden,
-            out_channels=16
-        )
+        # NNConv layers
+        self.conv1 = NNConv(64, 64, self.mlp1, aggr='mean')
+        self.conv2 = NNConv(64, 128, self.mlp2, aggr='mean')
+        self.conv3 = NNConv(128, 32, self.mlp3, aggr='mean')
         
         # Batch normalization layers
         self.bn1 = torch.nn.BatchNorm1d(64)
-        self.bn2 = torch.nn.BatchNorm1d(32)
-        self.bn3 = torch.nn.BatchNorm1d(16)
-        
-        # Final classification layer
-        self.fc = torch.nn.Linear(16, 5)
+        self.bn2 = torch.nn.BatchNorm1d(128)
+        self.bn3 = torch.nn.BatchNorm1d(32)
+        self.fc = torch.nn.Linear(32, 5)
         
     def forward(self, x, edge_index, edge_attr, batch):
-        # Initial feature dimensions
-        # x: [num_nodes, num_node_features]
-        # edge_attr: [num_edges, num_edge_features]
-        
-        # Process edge features
+        # Process edge and node features
         edge_attr = edge_attr.float()
         edge_embedding = self.edge_embedding(edge_attr)
-        # edge_embedding: [num_edges, edge_hidden]
         
         # Embed node features
         x = self.node_embedding(x)
-        # x: [num_nodes, node_hidden]
         
-        # Apply convolutions with edge features
+        # Apply convolutions
         x = self.conv1(x, edge_index, edge_embedding)
         x = F.relu(self.bn1(x))
         x = F.dropout(x, p=0.2, training=self.training)
-        # x: [num_nodes, 128]
         
         x = self.conv2(x, edge_index, edge_embedding)
         x = F.relu(self.bn2(x))
         x = F.dropout(x, p=0.2, training=self.training)
-        # x: [num_nodes, 64]
         
         x = self.conv3(x, edge_index, edge_embedding)
         x = F.relu(self.bn3(x))
-        # x: [num_nodes, 32]
         
         # Global pooling
         x = global_mean_pool(x, batch)
-        # x: [batch_size, 32]
         
         # Final classification
         x = self.fc(x)
         x = torch.sigmoid(x)
-        # x: [batch_size, 5]
         
         return x
-
+    
 def calculate_metrics(y_true, y_pred, mask):
     """Calculate various performance metrics."""
     # Convert predictions to binary (0/1)
@@ -169,7 +114,7 @@ def calculate_metrics(y_true, y_pred, mask):
 
 # Create unique run name with timestamp
 current_time = datetime.datetime.now().strftime('%Y%m%d-%H%M%S')
-log_dir = f'runs/GCN_tox21_{current_time}'
+log_dir = f'runs/NNConv_{current_time}'
 writer = SummaryWriter(log_dir)
 
 def train(model, train_loader, optimizer, device, epoch):
@@ -261,12 +206,12 @@ test_dataset = dataset[int(0.8 * len(dataset)):]
 
 # Create data loaders
 
-train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
-test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)
+train_loader = DataLoader(train_dataset, batch_size=256, shuffle=True)
+test_loader = DataLoader(test_dataset, batch_size=256, shuffle=False)
                        
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-model = GCNTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)
+model = GCNTox21NNConv(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
 # Save model summary
@@ -307,4 +252,3 @@ for epoch in range(num_epochs):
 
 # Close writer at the end
 writer.close()
-
