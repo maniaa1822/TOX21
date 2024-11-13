@@ -1,7 +1,7 @@
 import torch
 import torch.nn.functional as F
 from torch_geometric.datasets import MoleculeNet
-from torch_geometric.nn import GCNConv, global_mean_pool
+from torch_geometric.nn import GCNConv, global_mean_pool, EdgeConv
 from sklearn.metrics import roc_auc_score
 import numpy as np
 from torch_geometric.data import DataLoader
@@ -9,38 +9,70 @@ from torch.utils.tensorboard import SummaryWriter
 import datetime
 
 class GCNTox21(torch.nn.Module):
-    def __init__(self, num_node_features):
+    def __init__(self, num_node_features, num_edge_features):
         super(GCNTox21, self).__init__()
-        # Graph convolution layers
-        self.conv1 = GCNConv(num_node_features, 64)
-        self.conv2 = GCNConv(64, 64)
-        self.conv3 = GCNConv(64, 64)
+        # Edge embedding layer
+        self.edge_embedding = torch.nn.Linear(num_edge_features, 32)
+        
+        # Node embedding layer
+        self.node_embedding = torch.nn.Linear(num_node_features, 64)
+        
+        # Define MLPs for EdgeConv layers
+        self.mlp1 = torch.nn.Sequential(
+            torch.nn.Linear(2 * 64, 128),  # Only node features for EdgeConv
+            torch.nn.ReLU(),
+            torch.nn.Linear(128, 128)
+        )
+        self.mlp2 = torch.nn.Sequential(
+            torch.nn.Linear(2 * 128, 64),
+            torch.nn.ReLU(),
+            torch.nn.Linear(64, 64)
+        )
+        self.mlp3 = torch.nn.Sequential(
+            torch.nn.Linear(2 * 64, 32),
+            torch.nn.ReLU(),
+            torch.nn.Linear(32, 32)
+        )
+        
+        # Edge convolution layers
+        self.conv1 = EdgeConv(self.mlp1, aggr='mean')
+        self.conv2 = EdgeConv(self.mlp2, aggr='mean')
+        self.conv3 = EdgeConv(self.mlp3, aggr='mean')
         
         # Batch normalization layers
-        self.bn1 = torch.nn.BatchNorm1d(64)
+        self.bn1 = torch.nn.BatchNorm1d(128)
         self.bn2 = torch.nn.BatchNorm1d(64)
-        self.bn3 = torch.nn.BatchNorm1d(64)
+        self.bn3 = torch.nn.BatchNorm1d(32)
+        self.fc = torch.nn.Linear(32, 5)
         
-        # Fully connected layer for graph-level prediction
-        # Now predicting only 5 toxicity tasks
-        self.fc = torch.nn.Linear(64, 5)
+    def forward(self, x, edge_index, edge_attr, batch):
+        # Process edge and node features
+        edge_attr = edge_attr.float()
+        edge_embedding = self.edge_embedding(edge_attr)
         
-    def forward(self, x, edge_index, batch):
-        # Apply graph convolutions with batch normalization
-        x = F.relu(self.bn1(self.conv1(x, edge_index)))
+        # Embed node features
+        x = self.node_embedding(x)
+        
+        # Apply convolutions
+        x = self.conv1(x, edge_index)
+        x = F.relu(self.bn1(x))
         x = F.dropout(x, p=0.2, training=self.training)
         
-        x = F.relu(self.bn2(self.conv2(x, edge_index)))
+        x = self.conv2(x, edge_index)
+        x = F.relu(self.bn2(x))
         x = F.dropout(x, p=0.2, training=self.training)
         
-        x = F.relu(self.bn3(self.conv3(x, edge_index)))
+        x = self.conv3(x, edge_index)
+        x = F.relu(self.bn3(x))
         
-        # Global pooling to get graph-level representations
+        # Global pooling
         x = global_mean_pool(x, batch)
         
-        # Predict toxicity for 5 tasks
+        # Final classification
         x = self.fc(x)
-        return torch.sigmoid(x)
+        x = torch.sigmoid(x)
+        
+        return x
 
 def calculate_metrics(y_true, y_pred, mask):
     """Calculate various performance metrics."""
@@ -99,7 +131,7 @@ def train(model, train_loader, optimizer, device, epoch):
         optimizer.zero_grad()
         
         # Get model predictions
-        out = model(data.x, data.edge_index, data.batch)
+        out = model(data.x, data.edge_index, data.edge_attr, data.batch)
         
         # Get first 5 labels
         target = data.y[:, :5].float()
@@ -144,7 +176,7 @@ def validate(model, val_loader, device, epoch):
         data.x = data.x.float()
         data.edge_index = data.edge_index.long()
         
-        out = model(data.x, data.edge_index, data.batch)
+        out = model(data.x, data.edge_index, data.edge_attr, data.batch)
         target = data.y[:, :5].float()
         
         mask = ~torch.isnan(target)
@@ -179,7 +211,7 @@ test_loader = DataLoader(test_dataset, batch_size=256, shuffle=False)
                        
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-model = GCNTox21(dataset[0].num_node_features).to(device)
+model = GCNTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
 # Print the 5 toxicity tasks we're predicting along with their descriptions
