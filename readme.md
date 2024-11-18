@@ -22,3 +22,45 @@ We employ several GNN architectures to predict the toxicity tasks in the TOX21 d
 
 Each model is trained to predict 12 different toxicity tasks, and we evaluate their performance using metrics such as accuracy, precision, recall, F1 score, and ROC-AUC.
 
+## Baseline Methods
+
+To establish performance benchmarks before implementing more complex Graph Neural Networks (GNNs), we evaluated several classical machine learning approaches on the Tox21 dataset. These baseline models provide a foundation for comparing the effectiveness of more sophisticated architectures.
+
+### Implementation
+
+We developed three tree-based ensemble models:
+- Random Forest
+- XGBoost
+- Gradient Boosting
+
+Each model predicts multiple toxicity endpoints using molecular features extracted from SMILES representations. For molecular featurization, we employed a bag-of-words encoding approach, which converts chemical structures into numerical vectors while preserving key molecular information.
+
+### Methodology
+
+Our experimental pipeline consists of:
+1. Data preprocessing and cleaning
+2. Molecular feature extraction from SMILES notation
+3. Dataset stratification and scaling
+4. Model training and hyperparameter tuning
+5. Comprehensive performance evaluation across multiple metrics
+
+The results provide baseline performance metrics (see table below) against which future GNN implementations can be compared.
+
+
+### Baseline Performance Comparison
+
+| Metric | Random Forest | XGBoost | Gradient Boosting |
+|--------|--------------|---------|------------------|
+| Precision | 79.69% | 73.33% | 56.22% |
+| Recall | 9.27% | 18.01% | 20.71% |
+| F1 Score | 13.91% | 27.31% | 29.10% |
+| Accuracy | 92.70% | 93.12% | 92.91% |
+| Balanced Accuracy | 54.62% | 58.76% | 59.87% |
+| ROC AUC | 81.07% | 79.52% | 79.29% |
+| Average Precision | 40.77% | 41.06% | 36.91% |
+
+Key observations:
+- Random Forest achieves highest precision and ROC AUC
+- Gradient Boosting shows best recall and balanced accuracy
+- XGBoost provides best overall balance with highest accuracy and average precision
+
