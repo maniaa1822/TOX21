@@ -26,7 +26,7 @@ class GATTox21(torch.nn.Module):
         self.bn3 = torch.nn.BatchNorm1d(32)
         
         # Output layer
-        self.fc = torch.nn.Linear(32, 5)
+        self.fc = torch.nn.Linear(32, 12)  # Update to 12 tasks
         
     def forward(self, x, edge_index, edge_attr, batch):
         # Initial node feature embedding
@@ -93,7 +93,7 @@ def calculate_metrics(y_true, y_pred, mask):
 
 # Create unique run name with timestamp
 current_time = datetime.datetime.now().strftime('%Y%m%d-%H%M%S')
-log_dir = f'runs/GAT_Tox21_{current_time}'
+log_dir = f'runs/GAT_Tox21_500_epochs{current_time}'
 writer = SummaryWriter(log_dir)
 
 def train(model, train_loader, optimizer, device, epoch):
@@ -112,8 +112,8 @@ def train(model, train_loader, optimizer, device, epoch):
         # Get model predictions
         out = model(data.x, data.edge_index, data.edge_attr, data.batch)
         
-        # Get first 5 labels
-        target = data.y[:, :5].float()
+        # Get all 12 labels
+        target = data.y[:, :12].float()
         
         # Calculate BCE loss only on non-nan targets
         mask = ~torch.isnan(target)
@@ -156,7 +156,7 @@ def validate(model, val_loader, device, epoch):
         data.edge_index = data.edge_index.long()
         
         out = model(data.x, data.edge_index, data.edge_attr, data.batch)
-        target = data.y[:, :5].float()
+        target = data.y[:, :12].float()
         
         mask = ~torch.isnan(target)
         loss = F.binary_cross_entropy(out[mask], target[mask])
@@ -193,24 +193,32 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model = GATTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
-# Print the 5 toxicity tasks we're predicting along with their descriptions
+# Print the 12 toxicity tasks we're predicting along with their descriptions
 print("Predicting the following toxicity tasks:")
 task_names = [
-    'NR-AR', 'NR-AR-LBD', 'NR-AhR', 'NR-Aromatase', 'NR-ER'
+    'NR-AR', 'NR-AR-LBD', 'NR-AhR', 'NR-Aromatase', 'NR-ER', 'NR-ER-LBD', 
+    'NR-PPAR-gamma', 'SR-ARE', 'SR-ATAD5', 'SR-HSE', 'SR-MMP', 'SR-p53'
 ]
 task_descriptions = [
     'Androgen Receptor',
     'Androgen Receptor Ligand Binding Domain',
     'Aryl Hydrocarbon Receptor',
     'Aromatase',
-    'Estrogen Receptor'
+    'Estrogen Receptor',
+    'Estrogen Receptor Ligand Binding Domain',
+    'Peroxisome Proliferator-Activated Receptor Gamma',
+    'Antioxidant Response Element',
+    'ATAD5',
+    'Heat Shock Factor Response Element',
+    'MMP',
+    'p53'
 ]
 
 for i, (task, description) in enumerate(zip(task_names, task_descriptions)):
     print(f"{i+1}. {task}: {description}")
 
 # Training loop
-num_epochs = 100
+num_epochs = 500
 best_val_auc = 0
 for epoch in range(num_epochs):
     train_metrics = train(model, train_loader, optimizer, device, epoch)

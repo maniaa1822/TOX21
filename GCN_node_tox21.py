@@ -43,7 +43,7 @@ class GCNTox21(torch.nn.Module):
         self.bn1 = torch.nn.BatchNorm1d(128)
         self.bn2 = torch.nn.BatchNorm1d(64)
         self.bn3 = torch.nn.BatchNorm1d(32)
-        self.fc = torch.nn.Linear(32, 5)
+        self.fc = torch.nn.Linear(32, 12)  # Update to 12 tasks
         
     def forward(self, x, edge_index, edge_attr, batch):
         # Process edge and node features
@@ -133,8 +133,8 @@ def train(model, train_loader, optimizer, device, epoch):
         # Get model predictions
         out = model(data.x, data.edge_index, data.edge_attr, data.batch)
         
-        # Get first 5 labels
-        target = data.y[:, :5].float()
+        # Get all 12 labels
+        target = data.y[:, :12].float()
         
         # Calculate BCE loss only on non-nan targets
         mask = ~torch.isnan(target)
@@ -177,7 +177,7 @@ def validate(model, val_loader, device, epoch):
         data.edge_index = data.edge_index.long()
         
         out = model(data.x, data.edge_index, data.edge_attr, data.batch)
-        target = data.y[:, :5].float()
+        target = data.y[:, :12].float()
         
         mask = ~torch.isnan(target)
         loss = F.binary_cross_entropy(out[mask], target[mask])
@@ -219,17 +219,25 @@ model_summary_path = f'{log_dir}/model_summary.txt'
 with open(model_summary_path, 'w') as f:
     f.write(str(model))
 
-# Print the 5 toxicity tasks we're predicting along with their descriptions
+# Print the 12 toxicity tasks we're predicting along with their descriptions
 print("Predicting the following toxicity tasks:")
 task_names = [
-    'NR-AR', 'NR-AR-LBD', 'NR-AhR', 'NR-Aromatase', 'NR-ER'
+    'NR-AR', 'NR-AR-LBD', 'NR-AhR', 'NR-Aromatase', 'NR-ER', 'NR-ER-LBD', 
+    'NR-PPAR-gamma', 'SR-ARE', 'SR-ATAD5', 'SR-HSE', 'SR-MMP', 'SR-p53'
 ]
 task_descriptions = [
     'Androgen Receptor',
     'Androgen Receptor Ligand Binding Domain',
     'Aryl Hydrocarbon Receptor',
     'Aromatase',
-    'Estrogen Receptor'
+    'Estrogen Receptor',
+    'Estrogen Receptor Ligand Binding Domain',
+    'Peroxisome Proliferator-Activated Receptor Gamma',
+    'Antioxidant Response Element',
+    'ATAD5',
+    'Heat Shock Factor Response Element',
+    'MMP',
+    'p53'
 ]
 
 for i, (task, description) in enumerate(zip(task_names, task_descriptions)):
