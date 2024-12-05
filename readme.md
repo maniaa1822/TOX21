@@ -108,9 +108,9 @@ The following table summarizes the performance results of each model after optim
 
 | Metric      | GAT     | GCN_node | GCN     | NNConv  |
 |-------------|---------|----------|---------|---------|
-| Accuracy    | 93.49%  | 93.69%   | 93.36%  | 93.63%  |
 | Precision   | 66.21%  | 61.24%   | 73.43%  | 66.72%  |
 | Recall      | 26.74%  | 36.69%   | 17.29%  | 29.77%  |
 | F1 Score    | 36.99%  | 45.36%   | 26.86%  | 40.09%  |
+| Accuracy    | 93.49%  | 93.69%   | 93.36%  | 93.63%  |
 | ROC AUC     | 83.28%  | 84.76%   | 83.82%  | 84.62%  |
 
