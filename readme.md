@@ -84,3 +84,13 @@ The TOX21 dataset's imbalance, with far more inactive compounds than active ones
 - **Precision-focused approach**: Raising the threshold improves precision by reducing false positives, but at the cost of missing a substantial number of true positives (reduced recall).
 
 ![precision and recall curve of GCN_node model](precision_rcall_curv/GCN_node_tox21.png)
+
+### Grid Search reesults
+
+
+| Models     | Factor | LR      | Min LR   | Patience | Threshold | Dropout | Hidden Dim | Num Heads | Num Layers | Edge Hidden |
+|-------------|--------|---------|----------|----------|-----------|---------|------------|-----------|------------|-------------|
+| **GAT**     | 0.5    | 0.001   | 1e-06    | 2        | 0.0001    | 0.2     | 64         | 8         | 4          | -           |
+| **NNConv**  | 0.5    | 0.001   | 1e-06    | 10       | 0.001     | 0.5     | 256        | 2         | 4          | -           |
+| **GCN_node**| 0.1    | 0.001   | 1e-05    | 10       | 0.0001    | 0.2     | 256        | -         | 3          | -           |
+| **GCN**     | 0.1    | 0.001   | 1e-05    | 2        | 0.001     | 0.2     | 256        | -         | 3          | 16          |
