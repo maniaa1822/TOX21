@@ -62,10 +62,8 @@ The results provide baseline performance metrics (see table below).
 | Accuracy | 92.70% | 93.12% | 92.91% |
 | ROC AUC | 81.07% | 79.52% | 79.29% |
 
-Key observations:
+
 - Random Forest achieves highest precision and ROC AUC
-- Gradient Boosting shows best recall and balanced accuracy
-- XGBoost provides best overall balance with highest accuracy and average precision
 
 ### Threshold Selection for Classification
 
