@@ -27,6 +27,16 @@ We employ several GNN architectures to predict the toxicity tasks in the TOX21 d
 
 Each model is trained to predict 12 different toxicity tasks, and we evaluate their performance using metrics such as accuracy, precision, recall, F1 score, and ROC-AUC.
 
+## Methodology
+
+Our experimental pipeline consists of:
+1. Data analysis
+2. Data preprocessing and cleaning
+3. Molecular feature extraction from SMILES notation
+4. Dataset stratification and scaling
+5. Model training and hyperparameter tuning
+6. Comprehensive performance evaluation across multiple metrics
+
 ## Baseline Methods
 
 To establish performance benchmarks before implementing more complex Graph Neural Networks (GNNs), we evaluated several classical machine learning approaches on the Tox21 dataset. These baseline models provide a foundation for comparing the effectiveness of more sophisticated architectures.
@@ -40,20 +50,9 @@ We developed three tree-based ensemble models:
 
 Each model predicts multiple toxicity endpoints using molecular features extracted from SMILES representations. For molecular featurization, we employed a bag-of-words encoding approach, which converts chemical structures into numerical vectors while preserving key molecular information.
 
-### Methodology
-
-Our experimental pipeline consists of:
-1. Data analysis
-2. Data preprocessing and cleaning
-3. Molecular feature extraction from SMILES notation
-4. Dataset stratification and scaling
-5. Model training and hyperparameter tuning
-6. Comprehensive performance evaluation across multiple metrics
+### Baseline Performance Comparison
 
 The results provide baseline performance metrics (see table below).
-
-
-### Baseline Performance Comparison
 
 | Metric | Random Forest | XGBoost | Gradient Boosting |
 |--------|--------------|---------|------------------|
