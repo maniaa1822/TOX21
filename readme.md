@@ -85,8 +85,15 @@ The TOX21 dataset's imbalance, with far more inactive compounds than active ones
 
 ![precision and recall curve of GCN_node model](precision_rcall_curv/GCN_node_tox21.png)
 
-### Grid Search reesults
+## Grid Search Overview
 
+The table below summarizes the key hyperparameters used for each model in our experiments. These parameters were optimized using grid search to find the best configuration for each model's architecture and task.
+
+### Notes:
+- When a parameter is marked with a `-`, it means that the parameter is not applicable to the specific model then it was not included in the grid search optimization for that model.
+- the parameters for learning rate and the other parameters are trained separately in order to optiimized the computational time.
+
+## Hyperparameters Table
 
 | Models     | Factor | LR      | Min LR   | Patience | Threshold | Dropout | Hidden Dim | Num Heads | Num Layers | Edge Hidden |
 |-------------|--------|---------|----------|----------|-----------|---------|------------|-----------|------------|-------------|
