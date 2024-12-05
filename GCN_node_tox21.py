@@ -2,68 +2,58 @@ import torch
 import torch.nn.functional as F
 from torch_geometric.datasets import MoleculeNet
 from torch_geometric.nn import GCNConv, global_mean_pool, EdgeConv
-from sklearn.metrics import roc_auc_score
+from sklearn.metrics import roc_auc_score, precision_recall_curve
 import numpy as np
 from torch_geometric.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 import datetime
+import matplotlib.pyplot as plt
+from torch.optim.lr_scheduler import ReduceLROnPlateau
 
 class GCNTox21(torch.nn.Module):
-    def __init__(self, num_node_features, num_edge_features):
+    def __init__(self, num_node_features, num_edge_features,hidden_dim=256, num_layers=3, dropout=0.2):
         super(GCNTox21, self).__init__()
+        
         # Edge embedding layer
         self.edge_embedding = torch.nn.Linear(num_edge_features, 32)
         
         # Node embedding layer
-        self.node_embedding = torch.nn.Linear(num_node_features, 64)
+        self.node_embedding = torch.nn.Linear(num_node_features, hidden_dim)
         
-        # Define MLPs for EdgeConv layers
-        self.mlp1 = torch.nn.Sequential(
-            torch.nn.Linear(2 * 64, 128),  # Only node features for EdgeConv
-            torch.nn.ReLU(),
-            torch.nn.Linear(128, 128)
-        )
-        self.mlp2 = torch.nn.Sequential(
-            torch.nn.Linear(2 * 128, 64),
-            torch.nn.ReLU(),
-            torch.nn.Linear(64, 64)
-        )
-        self.mlp3 = torch.nn.Sequential(
-            torch.nn.Linear(2 * 64, 32),
-            torch.nn.ReLU(),
-            torch.nn.Linear(32, 32)
-        )
+        # Dynamically create MLPs and EdgeConv layers
+        self.convs = torch.nn.ModuleList()
+        self.bns = torch.nn.ModuleList()
         
-        # Edge convolution layers
-        self.conv1 = EdgeConv(self.mlp1, aggr='mean')
-        self.conv2 = EdgeConv(self.mlp2, aggr='mean')
-        self.conv3 = EdgeConv(self.mlp3, aggr='mean')
+        input_dim = hidden_dim
+        for i in range(num_layers):
+            # Define MLP for EdgeConv
+            mlp = torch.nn.Sequential(
+                torch.nn.Linear(2 * input_dim, hidden_dim),
+                torch.nn.ReLU(),
+                torch.nn.Linear(hidden_dim, hidden_dim)
+            )
+            self.convs.append(EdgeConv(mlp, aggr='mean'))
+            self.bns.append(torch.nn.BatchNorm1d(hidden_dim))
         
-        # Batch normalization layers
-        self.bn1 = torch.nn.BatchNorm1d(128)
-        self.bn2 = torch.nn.BatchNorm1d(64)
-        self.bn3 = torch.nn.BatchNorm1d(32)
-        self.fc = torch.nn.Linear(32, 12)  # Update to 12 tasks
+        # Fully connected output layer
+        self.fc = torch.nn.Linear(hidden_dim, 12)  # Update to 12 tasks
+        self.dropout = dropout
         
     def forward(self, x, edge_index, edge_attr, batch):
-        # Process edge and node features
+        # Process edge features
         edge_attr = edge_attr.float()
         edge_embedding = self.edge_embedding(edge_attr)
         
         # Embed node features
         x = self.node_embedding(x)
         
-        # Apply convolutions
-        x = self.conv1(x, edge_index)
-        x = F.relu(self.bn1(x))
-        x = F.dropout(x, p=0.2, training=self.training)
-        
-        x = self.conv2(x, edge_index)
-        x = F.relu(self.bn2(x))
-        x = F.dropout(x, p=0.2, training=self.training)
-        
-        x = self.conv3(x, edge_index)
-        x = F.relu(self.bn3(x))
+        # Apply convolutions dynamically
+        for i, (conv, bn) in enumerate(zip(self.convs, self.bns)):
+            x = conv(x, edge_index)
+            x = F.relu(bn(x))
+            # Apply dropout only if not the last layer
+            if i < len(self.convs) - 1:
+                x = F.dropout(x, p=self.dropout, training=self.training)
         
         # Global pooling
         x = global_mean_pool(x, batch)
@@ -170,6 +160,8 @@ def validate(model, val_loader, device, epoch):
     model.eval()
     total_loss = 0
     all_metrics = []
+    all_y_true = []
+    all_y_pred = []
     
     for data in val_loader:
         data = data.to(device)
@@ -185,6 +177,10 @@ def validate(model, val_loader, device, epoch):
         batch_metrics = calculate_metrics(target, out, mask)
         all_metrics.append(batch_metrics)
         total_loss += loss.item() * data.num_graphs
+        
+        # Collect predictions and true labels
+        all_y_true.append(target[mask].cpu())
+        all_y_pred.append(out[mask].cpu())
     
     avg_metrics = {
         key: np.mean([m[key] for m in all_metrics])
@@ -196,67 +192,109 @@ def validate(model, val_loader, device, epoch):
     for metric_name, metric_value in avg_metrics.items():
         writer.add_scalar(f'Val/{metric_name}', metric_value, epoch)
     
-    return avg_metrics
-
-# Setup and training
-dataset = MoleculeNet(root='data/TOX21', name='TOX21')
-# Split dataset into train and test 0.8
-train_dataset = dataset[:int(0.8 * len(dataset))]
-test_dataset = dataset[int(0.8 * len(dataset)):]
-
-# Create data loaders
-
-train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
-test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)
-                       
-
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-model = GCNTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)
-optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
-
-# Save model summary
-model_summary_path = f'{log_dir}/model_summary.txt'
-with open(model_summary_path, 'w') as f:
-    f.write(str(model))
-
-# Print the 12 toxicity tasks we're predicting along with their descriptions
-print("Predicting the following toxicity tasks:")
-task_names = [
-    'NR-AR', 'NR-AR-LBD', 'NR-AhR', 'NR-Aromatase', 'NR-ER', 'NR-ER-LBD', 
-    'NR-PPAR-gamma', 'SR-ARE', 'SR-ATAD5', 'SR-HSE', 'SR-MMP', 'SR-p53'
-]
-task_descriptions = [
-    'Androgen Receptor',
-    'Androgen Receptor Ligand Binding Domain',
-    'Aryl Hydrocarbon Receptor',
-    'Aromatase',
-    'Estrogen Receptor',
-    'Estrogen Receptor Ligand Binding Domain',
-    'Peroxisome Proliferator-Activated Receptor Gamma',
-    'Antioxidant Response Element',
-    'ATAD5',
-    'Heat Shock Factor Response Element',
-    'MMP',
-    'p53'
-]
-
-for i, (task, description) in enumerate(zip(task_names, task_descriptions)):
-    print(f"{i+1}. {task}: {description}")
-
-# Training loop
-num_epochs = 100
-best_val_auc = 0
-for epoch in range(num_epochs):
-    train_metrics = train(model, train_loader, optimizer, device, epoch)
-    val_metrics = validate(model, test_loader, device, epoch)
+    # Aggregate all true and predicted values
+    all_y_true = torch.cat(all_y_true, dim=0).numpy()
+    all_y_pred = torch.cat(all_y_pred, dim=0).numpy()
     
-    print(f'Epoch {epoch:03d}:')
-    print('Training metrics:')
-    for k, v in train_metrics.items():
-        print(f'  {k}: {v:.4f}')
-    print('Validation metrics:')
-    for k, v in val_metrics.items():
-        print(f'  {k}: {v:.4f}')
+    return avg_metrics, all_y_true, all_y_pred
 
-# Close writer at the end
-writer.close()
+if __name__ == '__main__':
+    # Setup and training
+    dataset = MoleculeNet(root='data/TOX21', name='TOX21')
+    # Split dataset into train and test 0.8
+    train_dataset = dataset[:int(0.8 * len(dataset))]
+    test_dataset = dataset[int(0.8 * len(dataset)):]
+
+    # Create data loaders
+
+    train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
+    test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)
+                        
+
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    model = GCNTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)
+    optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+    scheduler = ReduceLROnPlateau(optimizer, mode='min', factor=0.1, patience=10, verbose=True, threshold=0.0001, min_lr=1e-05)
+
+    # Save model summary
+    model_summary_path = f'{log_dir}/model_summary.txt'
+    with open(model_summary_path, 'w') as f:
+        f.write(str(model))
+
+    # Print the 12 toxicity tasks we're predicting along with their descriptions
+    print("Predicting the following toxicity tasks:")
+    task_names = [
+        'NR-AR', 'NR-AR-LBD', 'NR-AhR', 'NR-Aromatase', 'NR-ER', 'NR-ER-LBD', 
+        'NR-PPAR-gamma', 'SR-ARE', 'SR-ATAD5', 'SR-HSE', 'SR-MMP', 'SR-p53'
+    ]
+    task_descriptions = [
+        'Androgen Receptor',
+        'Androgen Receptor Ligand Binding Domain',
+        'Aryl Hydrocarbon Receptor',
+        'Aromatase',
+        'Estrogen Receptor',
+        'Estrogen Receptor Ligand Binding Domain',
+        'Peroxisome Proliferator-Activated Receptor Gamma',
+        'Antioxidant Response Element',
+        'ATAD5',
+        'Heat Shock Factor Response Element',
+        'MMP',
+        'p53'
+    ]
+
+    for i, (task, description) in enumerate(zip(task_names, task_descriptions)):
+        print(f"{i+1}. {task}: {description}")
+
+    # Training loop
+    num_epochs = 100
+    best_val_auc = 0
+    final_y_true, final_y_pred = None, None  # To store the last epoch's predictions
+
+    for epoch in range(num_epochs):
+        train_metrics = train(model, train_loader, optimizer, device, epoch)
+        val_metrics, y_true, y_pred  = validate(model, test_loader, device, epoch)
+
+        # Update the learning rate scheduler based on validation loss
+        scheduler.step(val_metrics['loss'])
+
+        # Store the predictions for the last epoch
+        if epoch == num_epochs - 1:
+            final_y_true, final_y_pred = y_true, y_pred
+        
+        print(f'Epoch {epoch:03d}:')
+        print('Training metrics:')
+        for k, v in train_metrics.items():
+            print(f'  {k}: {v:.4f}')
+        print('Validation metrics:')
+        for k, v in val_metrics.items():
+            print(f'  {k}: {v:.4f}')
+        
+        # Log current learning rate
+        current_lr = optimizer.param_groups[0]['lr']
+        writer.add_scalar('Learning Rate', current_lr, epoch)
+        print(f'Learning Rate: {current_lr}')
+
+    # After the last epoch, plot the precision-recall curve
+        
+        
+    # Compute the precision-recall curve
+    precision, recall, thresholds = precision_recall_curve(final_y_true.ravel(), final_y_pred.ravel())
+    thresholds = np.append(thresholds, 1.0)  # Extend thresholds to match precision/recall length
+
+    # Plot the precision-recall curve
+    plt.figure(figsize=(8, 6))
+    plt.plot(recall, precision, label="PR Curve")
+    for i, t in enumerate(thresholds[::len(thresholds)//10]):  # Annotate fewer points for clarity
+        plt.text(recall[i], precision[i], f'{t:.2f}', fontsize=8, alpha=0.7)
+    plt.xlabel('Recall')
+    plt.ylabel('Precision')
+    plt.title('Precision-Recall Curve (Final Epoch)')
+    plt.legend()
+    plt.savefig(f'precision_rcall_curv/GCN_node_tox21.png')
+    plt.show()
+
+    # Find and print the threshold for a target recall
+    target_recall = 0.8
+    idx = np.argmin(np.abs(recall - target_recall))
+    print(f"Threshold for recall ~{target_recall}: {thresholds[idx]} with precision: {precision[idx]}")
+

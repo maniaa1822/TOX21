@@ -1,0 +1,38 @@
+GCNTox21NNConv(
+  (edge_embedding): Linear(in_features=3, out_features=32, bias=True)
+  (node_embedding): Linear(in_features=9, out_features=64, bias=True)
+  (mlp1): Sequential(
+    (0): Linear(in_features=32, out_features=128, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=128, out_features=4096, bias=True)
+  )
+  (mlp2): Sequential(
+    (0): Linear(in_features=32, out_features=128, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=128, out_features=8192, bias=True)
+  )
+  (mlp3): Sequential(
+    (0): Linear(in_features=32, out_features=128, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=128, out_features=4096, bias=True)
+  )
+  (conv1): NNConv(64, 64, aggr=mean, nn=Sequential(
+    (0): Linear(in_features=32, out_features=128, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=128, out_features=4096, bias=True)
+  ))
+  (conv2): NNConv(64, 128, aggr=mean, nn=Sequential(
+    (0): Linear(in_features=32, out_features=128, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=128, out_features=8192, bias=True)
+  ))
+  (conv3): NNConv(128, 32, aggr=mean, nn=Sequential(
+    (0): Linear(in_features=32, out_features=128, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=128, out_features=4096, bias=True)
+  ))
+  (bn1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn2): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn3): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (fc): Linear(in_features=32, out_features=12, bias=True)
+)

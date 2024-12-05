@@ -69,3 +69,18 @@ Key observations:
 - Gradient Boosting shows best recall and balanced accuracy
 - XGBoost provides best overall balance with highest accuracy and average precision
 
+### Threshold Selection for Classification
+
+In predictive modeling for toxicity classification, the choice of the threshold value plays a critical role in determining the balance between false positives and false negatives. For the TOX21 dataset, our primary concern was to minimize false negatives, as missing potentially toxic compounds could have severe consequences. However, determining an optimal threshold that achieves a balanced trade-off between precision and recall proved challenging.
+
+#### Analysis of Precision-Recall Trade-off
+We evaluated the precision and recall trade-off by plotting the Precision-Recall (PR) curves for each model. The analysis revealed the following:
+- **Precision drops as recall improves**: While increasing the recall to 0.8 ensures a higher capture rate of toxic compounds, the precision drops significantly, falling below 0.2. This indicates that a large proportion of the predicted toxic compounds are false positives.
+- **No optimal balance**: Despite exploring various threshold values, we were unable to find a point where both precision and recall achieved a satisfactory balance. The inherent trade-off reflects the challenge of working with an imbalanced dataset, where the number of inactive compounds significantly outweighs active ones.
+
+#### Implications of Dataset Imbalance
+The TOX21 dataset's imbalance, with far more inactive compounds than active ones, contributes to the skewed precision-recall dynamics. This imbalance affects the model's ability to achieve high recall without sacrificing precision:
+- **Recall-focused approach**: Lowering the threshold increases recall, capturing more true positives but also introducing a higher number of false positives.
+- **Precision-focused approach**: Raising the threshold improves precision by reducing false positives, but at the cost of missing a substantial number of true positives (reduced recall).
+
+![precision and recall curve of GCN_node model](precision_rcall_curv/GCN_node_tox21.png)

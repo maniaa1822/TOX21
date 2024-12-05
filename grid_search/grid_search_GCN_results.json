@@ -1,0 +1,33 @@
+{
+    "best_config_lr": {
+        "factor": 0.1,
+        "lr": 0.001,
+        "min_lr": 1e-05,
+        "patience": 2,
+        "threshold": 0.001,
+        "search_name": "Grid 1"
+    },
+    "best_metrics_lr": {
+        "accuracy": 0.9286194682121277,
+        "precision": 0.5140178263187408,
+        "recall": 0.20026050254702568,
+        "f1": 0.27726883947849273,
+        "auc": 0.8139285639167255,
+        "loss": 0.217238183919609
+    },
+    "best_config_architecture": {
+        "dropout": 0.2,
+        "edge_hidden": 16,
+        "hidden_dim": 256,
+        "num_layers": 3,
+        "search_name": "Grid 2"
+    },
+    "best_metrics_architecture": {
+        "accuracy": 0.9318180966377259,
+        "precision": 0.7345716297626496,
+        "recall": 0.13171706557273866,
+        "f1": 0.2130555984377861,
+        "auc": 0.8254229629120767,
+        "loss": 0.20553471344857743
+    }
+}
