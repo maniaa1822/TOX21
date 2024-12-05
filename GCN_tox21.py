@@ -9,6 +9,7 @@ from torch.utils.tensorboard import SummaryWriter
 import datetime
 import matplotlib.pyplot as plt
 from torch.optim.lr_scheduler import ReduceLROnPlateau
+import json
 
 
 class PairwiseEdgeConv(MessagePassing):
@@ -237,6 +238,14 @@ def validate(model, val_loader, device, epoch):
     return avg_metrics, all_y_true, all_y_pred
 
 if __name__ == '__main__':
+    # Load best hyperparameters from JSON
+    with open('grid_search/grid_search_GCN_results.json', 'r') as f:
+        best_params = json.load(f)
+    
+    # Combine architecture and learning parameters
+    model_params = best_params['best_config_architecture']
+    lr_params = best_params['best_config_lr']
+    
     # Setup and training
     dataset = MoleculeNet(root='data/TOX21', name='TOX21')
     # Split dataset into train and test 0.8
@@ -250,9 +259,25 @@ if __name__ == '__main__':
                         
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    model = GCNTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)
-    optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
-    scheduler = ReduceLROnPlateau(optimizer, mode='min', factor=0.1, patience=2, verbose=True, threshold=0.001, min_lr=1e-05)
+    model = GCNTox21(
+        dataset[0].num_node_features, 
+        dataset[0].num_edge_features,
+        hidden_dim=model_params['hidden_dim'],
+        num_layers=model_params['num_layers'],
+        edge_hidden=model_params['edge_hidden'],
+        dropout=model_params['dropout']
+    ).to(device)
+    
+    optimizer = torch.optim.Adam(model.parameters(), lr=lr_params['lr'])
+    scheduler = ReduceLROnPlateau(
+        optimizer, 
+        mode='min',
+        factor=lr_params['factor'],
+        patience=lr_params['patience'],
+        verbose=True,
+        threshold=lr_params['threshold'],
+        min_lr=lr_params['min_lr']
+    )
 
     # Save model summary
     model_summary_path = f'{log_dir}/model_summary.txt'
@@ -335,5 +360,32 @@ if __name__ == '__main__':
     target_recall = 0.8
     idx = np.argmin(np.abs(recall - target_recall))
     print(f"Threshold for recall ~{target_recall}: {thresholds[idx]} with precision: {precision[idx]}")
+
+    # Add ROC curve to tensorboard
+    fpr, tpr, _ = roc_curve(final_y_true.ravel(), final_y_pred.ravel())
+    roc_auc = auc(fpr, tpr)
+
+    # Create figure for ROC curve
+    fig_roc = plt.figure(figsize=(8, 6))
+    plt.plot(fpr, tpr, color='darkorange', lw=2, label=f'ROC curve (AUC = {roc_auc:.2f})')
+    plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--')
+    plt.xlim([0.0, 1.0])
+    plt.ylim([0.0, 1.05])
+    plt.xlabel('False Positive Rate')
+    plt.ylabel('True Positive Rate')
+    plt.title('Receiver Operating Characteristic (ROC) Curve')
+    plt.legend(loc="lower right")
+
+    # Add plot to tensorboard
+    writer.add_figure('ROC Curve', fig_roc)
+    
+    # Save ROC curve as image
+    plt.savefig(f'{log_dir}/roc_curve.png')
+    plt.close()
+
+    # Add final ROC-AUC score to tensorboard
+    writer.add_scalar('Final/ROC_AUC', roc_auc)
+    
+    writer.close()
 
 

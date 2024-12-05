@@ -42,6 +42,38 @@
         "documentation": {}
     },
     {
+        "label": "ParameterGrid",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "ParameterGrid",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "ParameterGrid",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "ParameterGrid",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
         "label": "StandardScaler",
         "importPath": "sklearn.preprocessing",
         "description": "sklearn.preprocessing",
@@ -171,7 +203,23 @@
         "documentation": {}
     },
     {
-        "label": "roc_auc_score",
+        "label": "precision_recall_curve",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "roc_curve",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "auc",
         "importPath": "sklearn.metrics",
         "description": "sklearn.metrics",
         "isExtraImport": true,
@@ -187,7 +235,71 @@
         "documentation": {}
     },
     {
+        "label": "precision_recall_curve",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "roc_curve",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "auc",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
         "label": "roc_auc_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "precision_recall_curve",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "roc_auc_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "precision_recall_curve",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "roc_curve",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "auc",
         "importPath": "sklearn.metrics",
         "description": "sklearn.metrics",
         "isExtraImport": true,
@@ -363,6 +475,38 @@
         "documentation": {}
     },
     {
+        "label": "MoleculeNet",
+        "importPath": "torch_geometric.datasets",
+        "description": "torch_geometric.datasets",
+        "isExtraImport": true,
+        "detail": "torch_geometric.datasets",
+        "documentation": {}
+    },
+    {
+        "label": "MoleculeNet",
+        "importPath": "torch_geometric.datasets",
+        "description": "torch_geometric.datasets",
+        "isExtraImport": true,
+        "detail": "torch_geometric.datasets",
+        "documentation": {}
+    },
+    {
+        "label": "MoleculeNet",
+        "importPath": "torch_geometric.datasets",
+        "description": "torch_geometric.datasets",
+        "isExtraImport": true,
+        "detail": "torch_geometric.datasets",
+        "documentation": {}
+    },
+    {
+        "label": "MoleculeNet",
+        "importPath": "torch_geometric.datasets",
+        "description": "torch_geometric.datasets",
+        "isExtraImport": true,
+        "detail": "torch_geometric.datasets",
+        "documentation": {}
+    },
+    {
         "label": "GATv2Conv",
         "importPath": "torch_geometric.nn",
         "description": "torch_geometric.nn",
@@ -476,66 +620,10 @@
     },
     {
         "label": "DataLoader",
-        "importPath": "torch_geometric.data",
-        "description": "torch_geometric.data",
+        "importPath": "torch_geometric.loader",
+        "description": "torch_geometric.loader",
         "isExtraImport": true,
-        "detail": "torch_geometric.data",
-        "documentation": {}
-    },
-    {
-        "label": "DataLoader",
-        "importPath": "torch_geometric.data",
-        "description": "torch_geometric.data",
-        "isExtraImport": true,
-        "detail": "torch_geometric.data",
-        "documentation": {}
-    },
-    {
-        "label": "DataLoader",
-        "importPath": "torch_geometric.data",
-        "description": "torch_geometric.data",
-        "isExtraImport": true,
-        "detail": "torch_geometric.data",
-        "documentation": {}
-    },
-    {
-        "label": "DataLoader",
-        "importPath": "torch_geometric.data",
-        "description": "torch_geometric.data",
-        "isExtraImport": true,
-        "detail": "torch_geometric.data",
-        "documentation": {}
-    },
-    {
-        "label": "SummaryWriter",
-        "importPath": "torch.utils.tensorboard",
-        "description": "torch.utils.tensorboard",
-        "isExtraImport": true,
-        "detail": "torch.utils.tensorboard",
-        "documentation": {}
-    },
-    {
-        "label": "SummaryWriter",
-        "importPath": "torch.utils.tensorboard",
-        "description": "torch.utils.tensorboard",
-        "isExtraImport": true,
-        "detail": "torch.utils.tensorboard",
-        "documentation": {}
-    },
-    {
-        "label": "SummaryWriter",
-        "importPath": "torch.utils.tensorboard",
-        "description": "torch.utils.tensorboard",
-        "isExtraImport": true,
-        "detail": "torch.utils.tensorboard",
-        "documentation": {}
-    },
-    {
-        "label": "SummaryWriter",
-        "importPath": "torch.utils.tensorboard",
-        "description": "torch.utils.tensorboard",
-        "isExtraImport": true,
-        "detail": "torch.utils.tensorboard",
+        "detail": "torch_geometric.loader",
         "documentation": {}
     },
     {
@@ -544,6 +632,263 @@
         "description": "torch_geometric.loader",
         "isExtraImport": true,
         "detail": "torch_geometric.loader",
+        "documentation": {}
+    },
+    {
+        "label": "DataLoader",
+        "importPath": "torch_geometric.loader",
+        "description": "torch_geometric.loader",
+        "isExtraImport": true,
+        "detail": "torch_geometric.loader",
+        "documentation": {}
+    },
+    {
+        "label": "DataLoader",
+        "importPath": "torch_geometric.loader",
+        "description": "torch_geometric.loader",
+        "isExtraImport": true,
+        "detail": "torch_geometric.loader",
+        "documentation": {}
+    },
+    {
+        "label": "DataLoader",
+        "importPath": "torch_geometric.loader",
+        "description": "torch_geometric.loader",
+        "isExtraImport": true,
+        "detail": "torch_geometric.loader",
+        "documentation": {}
+    },
+    {
+        "label": "DataLoader",
+        "importPath": "torch_geometric.loader",
+        "description": "torch_geometric.loader",
+        "isExtraImport": true,
+        "detail": "torch_geometric.loader",
+        "documentation": {}
+    },
+    {
+        "label": "SummaryWriter",
+        "importPath": "torch.utils.tensorboard",
+        "description": "torch.utils.tensorboard",
+        "isExtraImport": true,
+        "detail": "torch.utils.tensorboard",
+        "documentation": {}
+    },
+    {
+        "label": "SummaryWriter",
+        "importPath": "torch.utils.tensorboard",
+        "description": "torch.utils.tensorboard",
+        "isExtraImport": true,
+        "detail": "torch.utils.tensorboard",
+        "documentation": {}
+    },
+    {
+        "label": "SummaryWriter",
+        "importPath": "torch.utils.tensorboard",
+        "description": "torch.utils.tensorboard",
+        "isExtraImport": true,
+        "detail": "torch.utils.tensorboard",
+        "documentation": {}
+    },
+    {
+        "label": "SummaryWriter",
+        "importPath": "torch.utils.tensorboard",
+        "description": "torch.utils.tensorboard",
+        "isExtraImport": true,
+        "detail": "torch.utils.tensorboard",
+        "documentation": {}
+    },
+    {
+        "label": "ReduceLROnPlateau",
+        "importPath": "torch.optim.lr_scheduler",
+        "description": "torch.optim.lr_scheduler",
+        "isExtraImport": true,
+        "detail": "torch.optim.lr_scheduler",
+        "documentation": {}
+    },
+    {
+        "label": "ReduceLROnPlateau",
+        "importPath": "torch.optim.lr_scheduler",
+        "description": "torch.optim.lr_scheduler",
+        "isExtraImport": true,
+        "detail": "torch.optim.lr_scheduler",
+        "documentation": {}
+    },
+    {
+        "label": "ReduceLROnPlateau",
+        "importPath": "torch.optim.lr_scheduler",
+        "description": "torch.optim.lr_scheduler",
+        "isExtraImport": true,
+        "detail": "torch.optim.lr_scheduler",
+        "documentation": {}
+    },
+    {
+        "label": "ReduceLROnPlateau",
+        "importPath": "torch.optim.lr_scheduler",
+        "description": "torch.optim.lr_scheduler",
+        "isExtraImport": true,
+        "detail": "torch.optim.lr_scheduler",
+        "documentation": {}
+    },
+    {
+        "label": "ReduceLROnPlateau",
+        "importPath": "torch.optim.lr_scheduler",
+        "description": "torch.optim.lr_scheduler",
+        "isExtraImport": true,
+        "detail": "torch.optim.lr_scheduler",
+        "documentation": {}
+    },
+    {
+        "label": "ReduceLROnPlateau",
+        "importPath": "torch.optim.lr_scheduler",
+        "description": "torch.optim.lr_scheduler",
+        "isExtraImport": true,
+        "detail": "torch.optim.lr_scheduler",
+        "documentation": {}
+    },
+    {
+        "label": "ReduceLROnPlateau",
+        "importPath": "torch.optim.lr_scheduler",
+        "description": "torch.optim.lr_scheduler",
+        "isExtraImport": true,
+        "detail": "torch.optim.lr_scheduler",
+        "documentation": {}
+    },
+    {
+        "label": "ReduceLROnPlateau",
+        "importPath": "torch.optim.lr_scheduler",
+        "description": "torch.optim.lr_scheduler",
+        "isExtraImport": true,
+        "detail": "torch.optim.lr_scheduler",
+        "documentation": {}
+    },
+    {
+        "label": "DataLoader",
+        "importPath": "torch_geometric.data",
+        "description": "torch_geometric.data",
+        "isExtraImport": true,
+        "detail": "torch_geometric.data",
+        "documentation": {}
+    },
+    {
+        "label": "DataLoader",
+        "importPath": "torch_geometric.data",
+        "description": "torch_geometric.data",
+        "isExtraImport": true,
+        "detail": "torch_geometric.data",
+        "documentation": {}
+    },
+    {
+        "label": "DataLoader",
+        "importPath": "torch_geometric.data",
+        "description": "torch_geometric.data",
+        "isExtraImport": true,
+        "detail": "torch_geometric.data",
+        "documentation": {}
+    },
+    {
+        "label": "GCNTox21",
+        "importPath": "GCN_node_tox21",
+        "description": "GCN_node_tox21",
+        "isExtraImport": true,
+        "detail": "GCN_node_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "train",
+        "importPath": "GCN_node_tox21",
+        "description": "GCN_node_tox21",
+        "isExtraImport": true,
+        "detail": "GCN_node_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "validate",
+        "importPath": "GCN_node_tox21",
+        "description": "GCN_node_tox21",
+        "isExtraImport": true,
+        "detail": "GCN_node_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "GCNTox21",
+        "importPath": "GCN_tox21",
+        "description": "GCN_tox21",
+        "isExtraImport": true,
+        "detail": "GCN_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "train",
+        "importPath": "GCN_tox21",
+        "description": "GCN_tox21",
+        "isExtraImport": true,
+        "detail": "GCN_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "validate",
+        "importPath": "GCN_tox21",
+        "description": "GCN_tox21",
+        "isExtraImport": true,
+        "detail": "GCN_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "GCNTox21NNConv",
+        "importPath": "NNConv_tox21",
+        "description": "NNConv_tox21",
+        "isExtraImport": true,
+        "detail": "NNConv_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "train",
+        "importPath": "NNConv_tox21",
+        "description": "NNConv_tox21",
+        "isExtraImport": true,
+        "detail": "NNConv_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "validate",
+        "importPath": "NNConv_tox21",
+        "description": "NNConv_tox21",
+        "isExtraImport": true,
+        "detail": "NNConv_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "GATTox21",
+        "importPath": "GAT_tox21",
+        "description": "GAT_tox21",
+        "isExtraImport": true,
+        "detail": "GAT_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "train",
+        "importPath": "GAT_tox21",
+        "description": "GAT_tox21",
+        "isExtraImport": true,
+        "detail": "GAT_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "validate",
+        "importPath": "GAT_tox21",
+        "description": "GAT_tox21",
+        "isExtraImport": true,
+        "detail": "GAT_tox21",
         "documentation": {}
     },
     {
@@ -806,7 +1151,7 @@
         "kind": 6,
         "importPath": "GAT_tox21",
         "description": "GAT_tox21",
-        "peekOfCode": "class GATTox21(torch.nn.Module):\n    def __init__(self, num_node_features, num_edge_features):\n        super(GATTox21, self).__init__()\n        # Initial node embedding\n        self.node_embedding = torch.nn.Linear(num_node_features, 64)\n        # GAT layers with edge features\n        self.conv1 = GATv2Conv(64, 128, edge_dim=num_edge_features, heads=4)\n        self.conv2 = GATv2Conv(128 * 4, 64, edge_dim=num_edge_features, heads=2)\n        self.conv3 = GATv2Conv(64 * 2, 32, edge_dim=num_edge_features, heads=1)\n        # Batch normalization layers",
+        "peekOfCode": "class GATTox21(torch.nn.Module):\n    def __init__(self, num_node_features, num_edge_features, hidden_dim=256, num_heads=2, num_layers=4, dropout=0.5):\n        super(GATTox21, self).__init__()\n        self.node_embedding = torch.nn.Linear(num_node_features, hidden_dim)\n        self.convs = torch.nn.ModuleList()\n        input_dim = hidden_dim\n        for _ in range(num_layers):\n            self.convs.append(GATv2Conv(input_dim, hidden_dim, edge_dim=num_edge_features, heads=num_heads))\n            input_dim = hidden_dim * num_heads\n        self.bn = torch.nn.ModuleList([torch.nn.BatchNorm1d(input_dim) for _ in range(num_layers)])",
         "detail": "GAT_tox21",
         "documentation": {}
     },
@@ -833,7 +1178,7 @@
         "kind": 2,
         "importPath": "GAT_tox21",
         "description": "GAT_tox21",
-        "peekOfCode": "def validate(model, val_loader, device, epoch):\n    model.eval()\n    total_loss = 0\n    all_metrics = []\n    for data in val_loader:\n        data = data.to(device)\n        data.x = data.x.float()\n        data.edge_index = data.edge_index.long()\n        out = model(data.x, data.edge_index, data.edge_attr, data.batch)\n        target = data.y[:, :12].float()",
+        "peekOfCode": "def validate(model, val_loader, device, epoch):\n    model.eval()\n    total_loss = 0\n    all_metrics = []\n    all_y_true = []\n    all_y_pred = []\n    for data in val_loader:\n        data = data.to(device)\n        data.x = data.x.float()\n        data.edge_index = data.edge_index.long()",
         "detail": "GAT_tox21",
         "documentation": {}
     },
@@ -865,119 +1210,11 @@
         "documentation": {}
     },
     {
-        "label": "dataset",
-        "kind": 5,
-        "importPath": "GAT_tox21",
-        "description": "GAT_tox21",
-        "peekOfCode": "dataset = MoleculeNet(root='data/TOX21', name='TOX21')\n# Split dataset into train and test 0.8\ntrain_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]\n# Create data loaders\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GATTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)",
-        "detail": "GAT_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "train_dataset",
-        "kind": 5,
-        "importPath": "GAT_tox21",
-        "description": "GAT_tox21",
-        "peekOfCode": "train_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]\n# Create data loaders\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GATTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Print the 12 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")",
-        "detail": "GAT_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "test_dataset",
-        "kind": 5,
-        "importPath": "GAT_tox21",
-        "description": "GAT_tox21",
-        "peekOfCode": "test_dataset = dataset[int(0.8 * len(dataset)):]\n# Create data loaders\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GATTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Print the 12 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")\ntask_names = [",
-        "detail": "GAT_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "train_loader",
-        "kind": 5,
-        "importPath": "GAT_tox21",
-        "description": "GAT_tox21",
-        "peekOfCode": "train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GATTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Print the 12 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")\ntask_names = [\n    'NR-AR', 'NR-AR-LBD', 'NR-AhR', 'NR-Aromatase', 'NR-ER', 'NR-ER-LBD', \n    'NR-PPAR-gamma', 'SR-ARE', 'SR-ATAD5', 'SR-HSE', 'SR-MMP', 'SR-p53'",
-        "detail": "GAT_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "test_loader",
-        "kind": 5,
-        "importPath": "GAT_tox21",
-        "description": "GAT_tox21",
-        "peekOfCode": "test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GATTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Print the 12 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")\ntask_names = [\n    'NR-AR', 'NR-AR-LBD', 'NR-AhR', 'NR-Aromatase', 'NR-ER', 'NR-ER-LBD', \n    'NR-PPAR-gamma', 'SR-ARE', 'SR-ATAD5', 'SR-HSE', 'SR-MMP', 'SR-p53'\n]",
-        "detail": "GAT_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "device",
-        "kind": 5,
-        "importPath": "GAT_tox21",
-        "description": "GAT_tox21",
-        "peekOfCode": "device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GATTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Print the 12 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")\ntask_names = [\n    'NR-AR', 'NR-AR-LBD', 'NR-AhR', 'NR-Aromatase', 'NR-ER', 'NR-ER-LBD', \n    'NR-PPAR-gamma', 'SR-ARE', 'SR-ATAD5', 'SR-HSE', 'SR-MMP', 'SR-p53'\n]\ntask_descriptions = [",
-        "detail": "GAT_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "model",
-        "kind": 5,
-        "importPath": "GAT_tox21",
-        "description": "GAT_tox21",
-        "peekOfCode": "model = GATTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Print the 12 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")\ntask_names = [\n    'NR-AR', 'NR-AR-LBD', 'NR-AhR', 'NR-Aromatase', 'NR-ER', 'NR-ER-LBD', \n    'NR-PPAR-gamma', 'SR-ARE', 'SR-ATAD5', 'SR-HSE', 'SR-MMP', 'SR-p53'\n]\ntask_descriptions = [\n    'Androgen Receptor',",
-        "detail": "GAT_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "optimizer",
-        "kind": 5,
-        "importPath": "GAT_tox21",
-        "description": "GAT_tox21",
-        "peekOfCode": "optimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Print the 12 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")\ntask_names = [\n    'NR-AR', 'NR-AR-LBD', 'NR-AhR', 'NR-Aromatase', 'NR-ER', 'NR-ER-LBD', \n    'NR-PPAR-gamma', 'SR-ARE', 'SR-ATAD5', 'SR-HSE', 'SR-MMP', 'SR-p53'\n]\ntask_descriptions = [\n    'Androgen Receptor',\n    'Androgen Receptor Ligand Binding Domain',",
-        "detail": "GAT_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "task_names",
-        "kind": 5,
-        "importPath": "GAT_tox21",
-        "description": "GAT_tox21",
-        "peekOfCode": "task_names = [\n    'NR-AR', 'NR-AR-LBD', 'NR-AhR', 'NR-Aromatase', 'NR-ER', 'NR-ER-LBD', \n    'NR-PPAR-gamma', 'SR-ARE', 'SR-ATAD5', 'SR-HSE', 'SR-MMP', 'SR-p53'\n]\ntask_descriptions = [\n    'Androgen Receptor',\n    'Androgen Receptor Ligand Binding Domain',\n    'Aryl Hydrocarbon Receptor',\n    'Aromatase',\n    'Estrogen Receptor',",
-        "detail": "GAT_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "task_descriptions",
-        "kind": 5,
-        "importPath": "GAT_tox21",
-        "description": "GAT_tox21",
-        "peekOfCode": "task_descriptions = [\n    'Androgen Receptor',\n    'Androgen Receptor Ligand Binding Domain',\n    'Aryl Hydrocarbon Receptor',\n    'Aromatase',\n    'Estrogen Receptor',\n    'Estrogen Receptor Ligand Binding Domain',\n    'Peroxisome Proliferator-Activated Receptor Gamma',\n    'Antioxidant Response Element',\n    'ATAD5',",
-        "detail": "GAT_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "num_epochs",
-        "kind": 5,
-        "importPath": "GAT_tox21",
-        "description": "GAT_tox21",
-        "peekOfCode": "num_epochs = 500\nbest_val_auc = 0\nfor epoch in range(num_epochs):\n    train_metrics = train(model, train_loader, optimizer, device, epoch)\n    val_metrics = validate(model, test_loader, device, epoch)\n    print(f'Epoch {epoch:03d}:')\n    print('Training metrics:')\n    for k, v in train_metrics.items():\n        print(f'  {k}: {v:.4f}')\n    print('Validation metrics:')",
-        "detail": "GAT_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "best_val_auc",
-        "kind": 5,
-        "importPath": "GAT_tox21",
-        "description": "GAT_tox21",
-        "peekOfCode": "best_val_auc = 0\nfor epoch in range(num_epochs):\n    train_metrics = train(model, train_loader, optimizer, device, epoch)\n    val_metrics = validate(model, test_loader, device, epoch)\n    print(f'Epoch {epoch:03d}:')\n    print('Training metrics:')\n    for k, v in train_metrics.items():\n        print(f'  {k}: {v:.4f}')\n    print('Validation metrics:')\n    for k, v in val_metrics.items():",
-        "detail": "GAT_tox21",
-        "documentation": {}
-    },
-    {
         "label": "GCNTox21",
         "kind": 6,
         "importPath": "GCN_node_tox21",
         "description": "GCN_node_tox21",
-        "peekOfCode": "class GCNTox21(torch.nn.Module):\n    def __init__(self, num_node_features, num_edge_features):\n        super(GCNTox21, self).__init__()\n        # Edge embedding layer\n        self.edge_embedding = torch.nn.Linear(num_edge_features, 32)\n        # Node embedding layer\n        self.node_embedding = torch.nn.Linear(num_node_features, 64)\n        # Define MLPs for EdgeConv layers\n        self.mlp1 = torch.nn.Sequential(\n            torch.nn.Linear(2 * 64, 128),  # Only node features for EdgeConv",
+        "peekOfCode": "class GCNTox21(torch.nn.Module):\n    def __init__(self, num_node_features, num_edge_features,hidden_dim=256, num_layers=3, dropout=0.2):\n        super(GCNTox21, self).__init__()\n        # Edge embedding layer\n        self.edge_embedding = torch.nn.Linear(num_edge_features, 32)\n        # Node embedding layer\n        self.node_embedding = torch.nn.Linear(num_node_features, hidden_dim)\n        # Dynamically create MLPs and EdgeConv layers\n        self.convs = torch.nn.ModuleList()\n        self.bns = torch.nn.ModuleList()",
         "detail": "GCN_node_tox21",
         "documentation": {}
     },
@@ -1004,7 +1241,7 @@
         "kind": 2,
         "importPath": "GCN_node_tox21",
         "description": "GCN_node_tox21",
-        "peekOfCode": "def validate(model, val_loader, device, epoch):\n    model.eval()\n    total_loss = 0\n    all_metrics = []\n    for data in val_loader:\n        data = data.to(device)\n        data.x = data.x.float()\n        data.edge_index = data.edge_index.long()\n        out = model(data.x, data.edge_index, data.edge_attr, data.batch)\n        target = data.y[:, :12].float()",
+        "peekOfCode": "def validate(model, val_loader, device, epoch):\n    model.eval()\n    total_loss = 0\n    all_metrics = []\n    all_y_true = []\n    all_y_pred = []\n    for data in val_loader:\n        data = data.to(device)\n        data.x = data.x.float()\n        data.edge_index = data.edge_index.long()",
         "detail": "GCN_node_tox21",
         "documentation": {}
     },
@@ -1036,123 +1273,6 @@
         "documentation": {}
     },
     {
-        "label": "dataset",
-        "kind": 5,
-        "importPath": "GCN_node_tox21",
-        "description": "GCN_node_tox21",
-        "peekOfCode": "dataset = MoleculeNet(root='data/TOX21', name='TOX21')\n# Split dataset into train and test 0.8\ntrain_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]\n# Create data loaders\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)",
-        "detail": "GCN_node_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "train_dataset",
-        "kind": 5,
-        "importPath": "GCN_node_tox21",
-        "description": "GCN_node_tox21",
-        "peekOfCode": "train_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]\n# Create data loaders\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'",
-        "detail": "GCN_node_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "test_dataset",
-        "kind": 5,
-        "importPath": "GCN_node_tox21",
-        "description": "GCN_node_tox21",
-        "peekOfCode": "test_dataset = dataset[int(0.8 * len(dataset)):]\n# Create data loaders\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:",
-        "detail": "GCN_node_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "train_loader",
-        "kind": 5,
-        "importPath": "GCN_node_tox21",
-        "description": "GCN_node_tox21",
-        "peekOfCode": "train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:\n    f.write(str(model))\n# Print the 12 toxicity tasks we're predicting along with their descriptions",
-        "detail": "GCN_node_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "test_loader",
-        "kind": 5,
-        "importPath": "GCN_node_tox21",
-        "description": "GCN_node_tox21",
-        "peekOfCode": "test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:\n    f.write(str(model))\n# Print the 12 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")",
-        "detail": "GCN_node_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "device",
-        "kind": 5,
-        "importPath": "GCN_node_tox21",
-        "description": "GCN_node_tox21",
-        "peekOfCode": "device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:\n    f.write(str(model))\n# Print the 12 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")\ntask_names = [",
-        "detail": "GCN_node_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "model",
-        "kind": 5,
-        "importPath": "GCN_node_tox21",
-        "description": "GCN_node_tox21",
-        "peekOfCode": "model = GCNTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:\n    f.write(str(model))\n# Print the 12 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")\ntask_names = [\n    'NR-AR', 'NR-AR-LBD', 'NR-AhR', 'NR-Aromatase', 'NR-ER', 'NR-ER-LBD', ",
-        "detail": "GCN_node_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "optimizer",
-        "kind": 5,
-        "importPath": "GCN_node_tox21",
-        "description": "GCN_node_tox21",
-        "peekOfCode": "optimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:\n    f.write(str(model))\n# Print the 12 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")\ntask_names = [\n    'NR-AR', 'NR-AR-LBD', 'NR-AhR', 'NR-Aromatase', 'NR-ER', 'NR-ER-LBD', \n    'NR-PPAR-gamma', 'SR-ARE', 'SR-ATAD5', 'SR-HSE', 'SR-MMP', 'SR-p53'",
-        "detail": "GCN_node_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "model_summary_path",
-        "kind": 5,
-        "importPath": "GCN_node_tox21",
-        "description": "GCN_node_tox21",
-        "peekOfCode": "model_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:\n    f.write(str(model))\n# Print the 12 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")\ntask_names = [\n    'NR-AR', 'NR-AR-LBD', 'NR-AhR', 'NR-Aromatase', 'NR-ER', 'NR-ER-LBD', \n    'NR-PPAR-gamma', 'SR-ARE', 'SR-ATAD5', 'SR-HSE', 'SR-MMP', 'SR-p53'\n]\ntask_descriptions = [",
-        "detail": "GCN_node_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "task_names",
-        "kind": 5,
-        "importPath": "GCN_node_tox21",
-        "description": "GCN_node_tox21",
-        "peekOfCode": "task_names = [\n    'NR-AR', 'NR-AR-LBD', 'NR-AhR', 'NR-Aromatase', 'NR-ER', 'NR-ER-LBD', \n    'NR-PPAR-gamma', 'SR-ARE', 'SR-ATAD5', 'SR-HSE', 'SR-MMP', 'SR-p53'\n]\ntask_descriptions = [\n    'Androgen Receptor',\n    'Androgen Receptor Ligand Binding Domain',\n    'Aryl Hydrocarbon Receptor',\n    'Aromatase',\n    'Estrogen Receptor',",
-        "detail": "GCN_node_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "task_descriptions",
-        "kind": 5,
-        "importPath": "GCN_node_tox21",
-        "description": "GCN_node_tox21",
-        "peekOfCode": "task_descriptions = [\n    'Androgen Receptor',\n    'Androgen Receptor Ligand Binding Domain',\n    'Aryl Hydrocarbon Receptor',\n    'Aromatase',\n    'Estrogen Receptor',\n    'Estrogen Receptor Ligand Binding Domain',\n    'Peroxisome Proliferator-Activated Receptor Gamma',\n    'Antioxidant Response Element',\n    'ATAD5',",
-        "detail": "GCN_node_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "num_epochs",
-        "kind": 5,
-        "importPath": "GCN_node_tox21",
-        "description": "GCN_node_tox21",
-        "peekOfCode": "num_epochs = 100\nbest_val_auc = 0\nfor epoch in range(num_epochs):\n    train_metrics = train(model, train_loader, optimizer, device, epoch)\n    val_metrics = validate(model, test_loader, device, epoch)\n    print(f'Epoch {epoch:03d}:')\n    print('Training metrics:')\n    for k, v in train_metrics.items():\n        print(f'  {k}: {v:.4f}')\n    print('Validation metrics:')",
-        "detail": "GCN_node_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "best_val_auc",
-        "kind": 5,
-        "importPath": "GCN_node_tox21",
-        "description": "GCN_node_tox21",
-        "peekOfCode": "best_val_auc = 0\nfor epoch in range(num_epochs):\n    train_metrics = train(model, train_loader, optimizer, device, epoch)\n    val_metrics = validate(model, test_loader, device, epoch)\n    print(f'Epoch {epoch:03d}:')\n    print('Training metrics:')\n    for k, v in train_metrics.items():\n        print(f'  {k}: {v:.4f}')\n    print('Validation metrics:')\n    for k, v in val_metrics.items():",
-        "detail": "GCN_node_tox21",
-        "documentation": {}
-    },
-    {
         "label": "PairwiseEdgeConv",
         "kind": 6,
         "importPath": "GCN_tox21",
@@ -1166,7 +1286,7 @@
         "kind": 6,
         "importPath": "GCN_tox21",
         "description": "GCN_tox21",
-        "peekOfCode": "class GCNTox21(torch.nn.Module):\n    def __init__(self, num_node_features, num_edge_features):\n        super(GCNTox21, self).__init__()\n        # Feature dimensions\n        self.node_hidden = 64\n        self.edge_hidden = 16\n        # Edge embedding layer\n        self.edge_embedding = torch.nn.Sequential(\n            torch.nn.Linear(num_edge_features, self.edge_hidden),\n            torch.nn.ReLU()",
+        "peekOfCode": "class GCNTox21(torch.nn.Module):\n    def __init__(self, num_node_features, num_edge_features,  hidden_dim=256, num_layers=3, edge_hidden=16, dropout=0.2):\n        super(GCNTox21, self).__init__()\n         # Edge embedding layer\n        self.edge_embedding = torch.nn.Sequential(\n            torch.nn.Linear(num_edge_features, edge_hidden),\n            torch.nn.ReLU()\n        )\n        # Node embedding layer\n        self.node_embedding = torch.nn.Sequential(",
         "detail": "GCN_tox21",
         "documentation": {}
     },
@@ -1193,7 +1313,7 @@
         "kind": 2,
         "importPath": "GCN_tox21",
         "description": "GCN_tox21",
-        "peekOfCode": "def validate(model, val_loader, device, epoch):\n    model.eval()\n    total_loss = 0\n    all_metrics = []\n    for data in val_loader:\n        data = data.to(device)\n        data.x = data.x.float()\n        data.edge_index = data.edge_index.long()\n        out = model(data.x, data.edge_index, data.edge_attr, data.batch)\n        target = data.y[:, :12].float()",
+        "peekOfCode": "def validate(model, val_loader, device, epoch):\n    model.eval()\n    total_loss = 0\n    all_metrics = []\n    all_y_true = []\n    all_y_pred = []\n    for data in val_loader:\n        data = data.to(device)\n        data.x = data.x.float()\n        data.edge_index = data.edge_index.long()",
         "detail": "GCN_tox21",
         "documentation": {}
     },
@@ -1225,128 +1345,11 @@
         "documentation": {}
     },
     {
-        "label": "dataset",
-        "kind": 5,
-        "importPath": "GCN_tox21",
-        "description": "GCN_tox21",
-        "peekOfCode": "dataset = MoleculeNet(root='data/TOX21', name='TOX21')\n# Split dataset into train and test 0.8\ntrain_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]\n# Create data loaders\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)",
-        "detail": "GCN_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "train_dataset",
-        "kind": 5,
-        "importPath": "GCN_tox21",
-        "description": "GCN_tox21",
-        "peekOfCode": "train_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]\n# Create data loaders\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'",
-        "detail": "GCN_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "test_dataset",
-        "kind": 5,
-        "importPath": "GCN_tox21",
-        "description": "GCN_tox21",
-        "peekOfCode": "test_dataset = dataset[int(0.8 * len(dataset)):]\n# Create data loaders\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:",
-        "detail": "GCN_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "train_loader",
-        "kind": 5,
-        "importPath": "GCN_tox21",
-        "description": "GCN_tox21",
-        "peekOfCode": "train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:\n    f.write(str(model))\n# Print the 12 toxicity tasks we're predicting along with their descriptions",
-        "detail": "GCN_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "test_loader",
-        "kind": 5,
-        "importPath": "GCN_tox21",
-        "description": "GCN_tox21",
-        "peekOfCode": "test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:\n    f.write(str(model))\n# Print the 12 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")",
-        "detail": "GCN_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "device",
-        "kind": 5,
-        "importPath": "GCN_tox21",
-        "description": "GCN_tox21",
-        "peekOfCode": "device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:\n    f.write(str(model))\n# Print the 12 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")\ntask_names = [",
-        "detail": "GCN_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "model",
-        "kind": 5,
-        "importPath": "GCN_tox21",
-        "description": "GCN_tox21",
-        "peekOfCode": "model = GCNTox21(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:\n    f.write(str(model))\n# Print the 12 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")\ntask_names = [\n    'NR-AR', 'NR-AR-LBD', 'NR-AhR', 'NR-Aromatase', 'NR-ER', 'NR-ER-LBD', ",
-        "detail": "GCN_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "optimizer",
-        "kind": 5,
-        "importPath": "GCN_tox21",
-        "description": "GCN_tox21",
-        "peekOfCode": "optimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:\n    f.write(str(model))\n# Print the 12 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")\ntask_names = [\n    'NR-AR', 'NR-AR-LBD', 'NR-AhR', 'NR-Aromatase', 'NR-ER', 'NR-ER-LBD', \n    'NR-PPAR-gamma', 'SR-ARE', 'SR-ATAD5', 'SR-HSE', 'SR-MMP', 'SR-p53'",
-        "detail": "GCN_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "model_summary_path",
-        "kind": 5,
-        "importPath": "GCN_tox21",
-        "description": "GCN_tox21",
-        "peekOfCode": "model_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:\n    f.write(str(model))\n# Print the 12 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")\ntask_names = [\n    'NR-AR', 'NR-AR-LBD', 'NR-AhR', 'NR-Aromatase', 'NR-ER', 'NR-ER-LBD', \n    'NR-PPAR-gamma', 'SR-ARE', 'SR-ATAD5', 'SR-HSE', 'SR-MMP', 'SR-p53'\n]\ntask_descriptions = [",
-        "detail": "GCN_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "task_names",
-        "kind": 5,
-        "importPath": "GCN_tox21",
-        "description": "GCN_tox21",
-        "peekOfCode": "task_names = [\n    'NR-AR', 'NR-AR-LBD', 'NR-AhR', 'NR-Aromatase', 'NR-ER', 'NR-ER-LBD', \n    'NR-PPAR-gamma', 'SR-ARE', 'SR-ATAD5', 'SR-HSE', 'SR-MMP', 'SR-p53'\n]\ntask_descriptions = [\n    'Androgen Receptor',\n    'Androgen Receptor Ligand Binding Domain',\n    'Aryl Hydrocarbon Receptor',\n    'Aromatase',\n    'Estrogen Receptor',",
-        "detail": "GCN_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "task_descriptions",
-        "kind": 5,
-        "importPath": "GCN_tox21",
-        "description": "GCN_tox21",
-        "peekOfCode": "task_descriptions = [\n    'Androgen Receptor',\n    'Androgen Receptor Ligand Binding Domain',\n    'Aryl Hydrocarbon Receptor',\n    'Aromatase',\n    'Estrogen Receptor',\n    'Estrogen Receptor Ligand Binding Domain',\n    'Peroxisome Proliferator-Activated Receptor Gamma',\n    'Antioxidant Response Element',\n    'ATAD5',",
-        "detail": "GCN_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "num_epochs",
-        "kind": 5,
-        "importPath": "GCN_tox21",
-        "description": "GCN_tox21",
-        "peekOfCode": "num_epochs = 100\nbest_val_auc = 0\nfor epoch in range(num_epochs):\n    train_metrics = train(model, train_loader, optimizer, device, epoch)\n    val_metrics = validate(model, test_loader, device, epoch)\n    print(f'Epoch {epoch:03d}:')\n    print('Training metrics:')\n    for k, v in train_metrics.items():\n        print(f'  {k}: {v:.4f}')\n    print('Validation metrics:')",
-        "detail": "GCN_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "best_val_auc",
-        "kind": 5,
-        "importPath": "GCN_tox21",
-        "description": "GCN_tox21",
-        "peekOfCode": "best_val_auc = 0\nfor epoch in range(num_epochs):\n    train_metrics = train(model, train_loader, optimizer, device, epoch)\n    val_metrics = validate(model, test_loader, device, epoch)\n    print(f'Epoch {epoch:03d}:')\n    print('Training metrics:')\n    for k, v in train_metrics.items():\n        print(f'  {k}: {v:.4f}')\n    print('Validation metrics:')\n    for k, v in val_metrics.items():",
-        "detail": "GCN_tox21",
-        "documentation": {}
-    },
-    {
         "label": "GCNTox21NNConv",
         "kind": 6,
         "importPath": "NNConv_tox21",
         "description": "NNConv_tox21",
-        "peekOfCode": "class GCNTox21NNConv(torch.nn.Module):\n    def __init__(self, num_node_features, num_edge_features):\n        super(GCNTox21NNConv, self).__init__()\n        # Edge embedding layer\n        self.edge_embedding = torch.nn.Linear(num_edge_features, 32)\n        # Node embedding layer\n        self.node_embedding = torch.nn.Linear(num_node_features, 64)\n        # Define MLPs for NNConv layers\n        self.mlp1 = torch.nn.Sequential(\n            torch.nn.Linear(32, 128),",
+        "peekOfCode": "class GCNTox21NNConv(torch.nn.Module):\n    def __init__(self, num_node_features, num_edge_features, hidden_dim=64, num_heads=2, num_layers=3, dropout=0.2):\n        super(GCNTox21NNConv, self).__init__()\n        # Edge embedding layer\n        self.edge_embedding = torch.nn.Linear(num_edge_features, hidden_dim // 2)\n        # Node embedding layer\n        self.node_embedding = torch.nn.Linear(num_node_features, hidden_dim)\n        # Dynamically create NNConv layers and MLPs\n        self.mlps = torch.nn.ModuleList()\n        self.convs = torch.nn.ModuleList()",
         "detail": "NNConv_tox21",
         "documentation": {}
     },
@@ -1373,7 +1376,7 @@
         "kind": 2,
         "importPath": "NNConv_tox21",
         "description": "NNConv_tox21",
-        "peekOfCode": "def validate(model, val_loader, device, epoch):\n    model.eval()\n    total_loss = 0\n    all_metrics = []\n    for data in val_loader:\n        data = data.to(device)\n        data.x = data.x.float()\n        data.edge_index = data.edge_index.long()\n        out = model(data.x, data.edge_index, data.edge_attr, data.batch)\n        target = data.y[:, :12].float()",
+        "peekOfCode": "def validate(model, val_loader, device, epoch):\n    model.eval()\n    total_loss = 0\n    all_metrics = []\n    all_y_true = []\n    all_y_pred = []\n    for data in val_loader:\n        data = data.to(device)\n        data.x = data.x.float()\n        data.edge_index = data.edge_index.long()",
         "detail": "NNConv_tox21",
         "documentation": {}
     },
@@ -1405,120 +1408,471 @@
         "documentation": {}
     },
     {
+        "label": "run_grid_search",
+        "kind": 2,
+        "importPath": "grid_search_GCN_node_tox21",
+        "description": "grid_search_GCN_node_tox21",
+        "peekOfCode": "def run_grid_search(grid, search_name):\n    global best_params, best_val_auc\n    best_metrics = None\n    for params in grid:\n        print(f\"Testing combination ({search_name}): {params}\")\n        # Determine if we are using grid_1 or grid_2 parameters\n        if search_name == \"Grid 1\":  # These are the learning rate scheduler parameters\n            # Initialize model with default parameters for the architecture\n            model = GCNTox21(\n                num_node_features=dataset[0].num_node_features,",
+        "detail": "grid_search_GCN_node_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "param_grid_1",
+        "kind": 5,
+        "importPath": "grid_search_GCN_node_tox21",
+        "description": "grid_search_GCN_node_tox21",
+        "peekOfCode": "param_grid_1 = {\n    'lr': [1e-4, 1e-3],\n    'factor': [0.1, 0.5],\n    'patience': [2, 5, 10],\n    'threshold': [1e-4, 1e-3],\n    'min_lr': [1e-6, 1e-5],\n}\nparam_grid_2 = {\n    'hidden_dim': [64, 128, 256],\n    'num_layers': [3, 4, 5],",
+        "detail": "grid_search_GCN_node_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "param_grid_2",
+        "kind": 5,
+        "importPath": "grid_search_GCN_node_tox21",
+        "description": "grid_search_GCN_node_tox21",
+        "peekOfCode": "param_grid_2 = {\n    'hidden_dim': [64, 128, 256],\n    'num_layers': [3, 4, 5],\n    'dropout': [0.2, 0.3, 0.5]\n}\n# Setup and training\ndataset = MoleculeNet(root='data/TOX21', name='TOX21')\ntrain_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)",
+        "detail": "grid_search_GCN_node_tox21",
+        "documentation": {}
+    },
+    {
         "label": "dataset",
         "kind": 5,
-        "importPath": "NNConv_tox21",
-        "description": "NNConv_tox21",
-        "peekOfCode": "dataset = MoleculeNet(root='data/TOX21', name='TOX21')\n# Split dataset into train and test 0.8\ntrain_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]\n# Create data loaders\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21NNConv(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)",
-        "detail": "NNConv_tox21",
+        "importPath": "grid_search_GCN_node_tox21",
+        "description": "grid_search_GCN_node_tox21",
+        "peekOfCode": "dataset = MoleculeNet(root='data/TOX21', name='TOX21')\ntrain_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\n# Generate all parameter combinations for both grid_1 and grid_2\ngrid_1 = ParameterGrid(param_grid_1)\ngrid_2 = ParameterGrid(param_grid_2)\n# Track the best model and performance\nbest_val_auc = 0",
+        "detail": "grid_search_GCN_node_tox21",
         "documentation": {}
     },
     {
         "label": "train_dataset",
         "kind": 5,
-        "importPath": "NNConv_tox21",
-        "description": "NNConv_tox21",
-        "peekOfCode": "train_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]\n# Create data loaders\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21NNConv(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'",
-        "detail": "NNConv_tox21",
+        "importPath": "grid_search_GCN_node_tox21",
+        "description": "grid_search_GCN_node_tox21",
+        "peekOfCode": "train_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\n# Generate all parameter combinations for both grid_1 and grid_2\ngrid_1 = ParameterGrid(param_grid_1)\ngrid_2 = ParameterGrid(param_grid_2)\n# Track the best model and performance\nbest_val_auc = 0\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")",
+        "detail": "grid_search_GCN_node_tox21",
         "documentation": {}
     },
     {
         "label": "test_dataset",
         "kind": 5,
-        "importPath": "NNConv_tox21",
-        "description": "NNConv_tox21",
-        "peekOfCode": "test_dataset = dataset[int(0.8 * len(dataset)):]\n# Create data loaders\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21NNConv(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:",
-        "detail": "NNConv_tox21",
+        "importPath": "grid_search_GCN_node_tox21",
+        "description": "grid_search_GCN_node_tox21",
+        "peekOfCode": "test_dataset = dataset[int(0.8 * len(dataset)):]\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\n# Generate all parameter combinations for both grid_1 and grid_2\ngrid_1 = ParameterGrid(param_grid_1)\ngrid_2 = ParameterGrid(param_grid_2)\n# Track the best model and performance\nbest_val_auc = 0\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n# Helper function to run grid search for both grids",
+        "detail": "grid_search_GCN_node_tox21",
         "documentation": {}
     },
     {
         "label": "train_loader",
         "kind": 5,
-        "importPath": "NNConv_tox21",
-        "description": "NNConv_tox21",
-        "peekOfCode": "train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21NNConv(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:\n    f.write(str(model))\n# Print the 12 toxicity tasks we're predicting along with their descriptions",
-        "detail": "NNConv_tox21",
+        "importPath": "grid_search_GCN_node_tox21",
+        "description": "grid_search_GCN_node_tox21",
+        "peekOfCode": "train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\n# Generate all parameter combinations for both grid_1 and grid_2\ngrid_1 = ParameterGrid(param_grid_1)\ngrid_2 = ParameterGrid(param_grid_2)\n# Track the best model and performance\nbest_val_auc = 0\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n# Helper function to run grid search for both grids\ndef run_grid_search(grid, search_name):",
+        "detail": "grid_search_GCN_node_tox21",
         "documentation": {}
     },
     {
         "label": "test_loader",
         "kind": 5,
-        "importPath": "NNConv_tox21",
-        "description": "NNConv_tox21",
-        "peekOfCode": "test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21NNConv(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:\n    f.write(str(model))\n# Print the 12 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")",
-        "detail": "NNConv_tox21",
+        "importPath": "grid_search_GCN_node_tox21",
+        "description": "grid_search_GCN_node_tox21",
+        "peekOfCode": "test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\n# Generate all parameter combinations for both grid_1 and grid_2\ngrid_1 = ParameterGrid(param_grid_1)\ngrid_2 = ParameterGrid(param_grid_2)\n# Track the best model and performance\nbest_val_auc = 0\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n# Helper function to run grid search for both grids\ndef run_grid_search(grid, search_name):\n    global best_params, best_val_auc",
+        "detail": "grid_search_GCN_node_tox21",
         "documentation": {}
     },
     {
-        "label": "device",
+        "label": "grid_1",
         "kind": 5,
-        "importPath": "NNConv_tox21",
-        "description": "NNConv_tox21",
-        "peekOfCode": "device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel = GCNTox21NNConv(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:\n    f.write(str(model))\n# Print the 12 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")\ntask_names = [",
-        "detail": "NNConv_tox21",
+        "importPath": "grid_search_GCN_node_tox21",
+        "description": "grid_search_GCN_node_tox21",
+        "peekOfCode": "grid_1 = ParameterGrid(param_grid_1)\ngrid_2 = ParameterGrid(param_grid_2)\n# Track the best model and performance\nbest_val_auc = 0\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n# Helper function to run grid search for both grids\ndef run_grid_search(grid, search_name):\n    global best_params, best_val_auc\n    best_metrics = None\n    for params in grid:",
+        "detail": "grid_search_GCN_node_tox21",
         "documentation": {}
     },
     {
-        "label": "model",
+        "label": "grid_2",
         "kind": 5,
-        "importPath": "NNConv_tox21",
-        "description": "NNConv_tox21",
-        "peekOfCode": "model = GCNTox21NNConv(dataset[0].num_node_features, dataset[0].num_edge_features).to(device)\noptimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:\n    f.write(str(model))\n# Print the 12 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")\ntask_names = [\n    'NR-AR', 'NR-AR-LBD', 'NR-AhR', 'NR-Aromatase', 'NR-ER', 'NR-ER-LBD', ",
-        "detail": "NNConv_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "optimizer",
-        "kind": 5,
-        "importPath": "NNConv_tox21",
-        "description": "NNConv_tox21",
-        "peekOfCode": "optimizer = torch.optim.Adam(model.parameters(), lr=0.001)\n# Save model summary\nmodel_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:\n    f.write(str(model))\n# Print the 12 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")\ntask_names = [\n    'NR-AR', 'NR-AR-LBD', 'NR-AhR', 'NR-Aromatase', 'NR-ER', 'NR-ER-LBD', \n    'NR-PPAR-gamma', 'SR-ARE', 'SR-ATAD5', 'SR-HSE', 'SR-MMP', 'SR-p53'",
-        "detail": "NNConv_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "model_summary_path",
-        "kind": 5,
-        "importPath": "NNConv_tox21",
-        "description": "NNConv_tox21",
-        "peekOfCode": "model_summary_path = f'{log_dir}/model_summary.txt'\nwith open(model_summary_path, 'w') as f:\n    f.write(str(model))\n# Print the 12 toxicity tasks we're predicting along with their descriptions\nprint(\"Predicting the following toxicity tasks:\")\ntask_names = [\n    'NR-AR', 'NR-AR-LBD', 'NR-AhR', 'NR-Aromatase', 'NR-ER', 'NR-ER-LBD', \n    'NR-PPAR-gamma', 'SR-ARE', 'SR-ATAD5', 'SR-HSE', 'SR-MMP', 'SR-p53'\n]\ntask_descriptions = [",
-        "detail": "NNConv_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "task_names",
-        "kind": 5,
-        "importPath": "NNConv_tox21",
-        "description": "NNConv_tox21",
-        "peekOfCode": "task_names = [\n    'NR-AR', 'NR-AR-LBD', 'NR-AhR', 'NR-Aromatase', 'NR-ER', 'NR-ER-LBD', \n    'NR-PPAR-gamma', 'SR-ARE', 'SR-ATAD5', 'SR-HSE', 'SR-MMP', 'SR-p53'\n]\ntask_descriptions = [\n    'Androgen Receptor',\n    'Androgen Receptor Ligand Binding Domain',\n    'Aryl Hydrocarbon Receptor',\n    'Aromatase',\n    'Estrogen Receptor',",
-        "detail": "NNConv_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "task_descriptions",
-        "kind": 5,
-        "importPath": "NNConv_tox21",
-        "description": "NNConv_tox21",
-        "peekOfCode": "task_descriptions = [\n    'Androgen Receptor',\n    'Androgen Receptor Ligand Binding Domain',\n    'Aryl Hydrocarbon Receptor',\n    'Aromatase',\n    'Estrogen Receptor',\n    'Estrogen Receptor Ligand Binding Domain',\n    'Peroxisome Proliferator-Activated Receptor Gamma',\n    'Antioxidant Response Element',\n    'ATAD5',",
-        "detail": "NNConv_tox21",
-        "documentation": {}
-    },
-    {
-        "label": "num_epochs",
-        "kind": 5,
-        "importPath": "NNConv_tox21",
-        "description": "NNConv_tox21",
-        "peekOfCode": "num_epochs = 100\nbest_val_auc = 0\nfor epoch in range(num_epochs):\n    train_metrics = train(model, train_loader, optimizer, device, epoch)\n    val_metrics = validate(model, test_loader, device, epoch)\n    print(f'Epoch {epoch:03d}:')\n    print('Training metrics:')\n    for k, v in train_metrics.items():\n        print(f'  {k}: {v:.4f}')\n    print('Validation metrics:')",
-        "detail": "NNConv_tox21",
+        "importPath": "grid_search_GCN_node_tox21",
+        "description": "grid_search_GCN_node_tox21",
+        "peekOfCode": "grid_2 = ParameterGrid(param_grid_2)\n# Track the best model and performance\nbest_val_auc = 0\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n# Helper function to run grid search for both grids\ndef run_grid_search(grid, search_name):\n    global best_params, best_val_auc\n    best_metrics = None\n    for params in grid:\n        print(f\"Testing combination ({search_name}): {params}\")",
+        "detail": "grid_search_GCN_node_tox21",
         "documentation": {}
     },
     {
         "label": "best_val_auc",
         "kind": 5,
-        "importPath": "NNConv_tox21",
-        "description": "NNConv_tox21",
-        "peekOfCode": "best_val_auc = 0\nfor epoch in range(num_epochs):\n    train_metrics = train(model, train_loader, optimizer, device, epoch)\n    val_metrics = validate(model, test_loader, device, epoch)\n    print(f'Epoch {epoch:03d}:')\n    print('Training metrics:')\n    for k, v in train_metrics.items():\n        print(f'  {k}: {v:.4f}')\n    print('Validation metrics:')\n    for k, v in val_metrics.items():",
-        "detail": "NNConv_tox21",
+        "importPath": "grid_search_GCN_node_tox21",
+        "description": "grid_search_GCN_node_tox21",
+        "peekOfCode": "best_val_auc = 0\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n# Helper function to run grid search for both grids\ndef run_grid_search(grid, search_name):\n    global best_params, best_val_auc\n    best_metrics = None\n    for params in grid:\n        print(f\"Testing combination ({search_name}): {params}\")\n        # Determine if we are using grid_1 or grid_2 parameters\n        if search_name == \"Grid 1\":  # These are the learning rate scheduler parameters",
+        "detail": "grid_search_GCN_node_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "device",
+        "kind": 5,
+        "importPath": "grid_search_GCN_node_tox21",
+        "description": "grid_search_GCN_node_tox21",
+        "peekOfCode": "device = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n# Helper function to run grid search for both grids\ndef run_grid_search(grid, search_name):\n    global best_params, best_val_auc\n    best_metrics = None\n    for params in grid:\n        print(f\"Testing combination ({search_name}): {params}\")\n        # Determine if we are using grid_1 or grid_2 parameters\n        if search_name == \"Grid 1\":  # These are the learning rate scheduler parameters\n            # Initialize model with default parameters for the architecture",
+        "detail": "grid_search_GCN_node_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "results",
+        "kind": 5,
+        "importPath": "grid_search_GCN_node_tox21",
+        "description": "grid_search_GCN_node_tox21",
+        "peekOfCode": "results = {\n    'best_config_lr': best_params_1,\n    'best_metrics_lr': best_metrics_1,\n    'best_config_architecture': best_params_2,\n    'best_metrics_architecture': best_metrics_2\n}\nwith open('grid_search/grid_search_GCN_node_results.json', 'w') as f:\n    json.dump(results, f, indent=4)\nprint(\"Best configuration and metrics saved to grid_search_results.json.\")",
+        "detail": "grid_search_GCN_node_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "run_grid_search",
+        "kind": 2,
+        "importPath": "grid_search_GCN_tox21",
+        "description": "grid_search_GCN_tox21",
+        "peekOfCode": "def run_grid_search(grid, search_name):\n    global best_params, best_val_auc\n    best_metrics = None\n    for params in grid:\n        print(f\"Testing combination ({search_name}): {params}\")\n        if search_name == \"Grid 1\":  # Learning rate scheduler parameters\n            # Default model parameters for grid_1 search\n            model = GCNTox21(\n                num_node_features=dataset[0].num_node_features,\n                num_edge_features=dataset[0].num_edge_features,",
+        "detail": "grid_search_GCN_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "param_grid_1",
+        "kind": 5,
+        "importPath": "grid_search_GCN_tox21",
+        "description": "grid_search_GCN_tox21",
+        "peekOfCode": "param_grid_1 = {\n    'lr': [1e-4, 1e-3],\n    'factor': [0.1, 0.5],\n    'patience': [2, 5, 10],\n}\nparam_grid_2 = {\n    'hidden_dim': [64, 128, 256],\n    'num_layers': [3, 4, 5],\n    'edge_hidden': [16, 32, 64],\n    'dropout': [0.2, 0.3, 0.5]",
+        "detail": "grid_search_GCN_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "param_grid_2",
+        "kind": 5,
+        "importPath": "grid_search_GCN_tox21",
+        "description": "grid_search_GCN_tox21",
+        "peekOfCode": "param_grid_2 = {\n    'hidden_dim': [64, 128, 256],\n    'num_layers': [3, 4, 5],\n    'edge_hidden': [16, 32, 64],\n    'dropout': [0.2, 0.3, 0.5]\n}\n# Setup and training\ndataset = MoleculeNet(root='data/TOX21', name='TOX21')\ntrain_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]",
+        "detail": "grid_search_GCN_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "dataset",
+        "kind": 5,
+        "importPath": "grid_search_GCN_tox21",
+        "description": "grid_search_GCN_tox21",
+        "peekOfCode": "dataset = MoleculeNet(root='data/TOX21', name='TOX21')\ntrain_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\n# Generate all parameter combinations for both grid_1 and grid_2\ngrid_1 = ParameterGrid(param_grid_1)\ngrid_2 = ParameterGrid(param_grid_2)\n# Track the best model and performance\nbest_val_auc = 0",
+        "detail": "grid_search_GCN_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "train_dataset",
+        "kind": 5,
+        "importPath": "grid_search_GCN_tox21",
+        "description": "grid_search_GCN_tox21",
+        "peekOfCode": "train_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\n# Generate all parameter combinations for both grid_1 and grid_2\ngrid_1 = ParameterGrid(param_grid_1)\ngrid_2 = ParameterGrid(param_grid_2)\n# Track the best model and performance\nbest_val_auc = 0\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")",
+        "detail": "grid_search_GCN_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "test_dataset",
+        "kind": 5,
+        "importPath": "grid_search_GCN_tox21",
+        "description": "grid_search_GCN_tox21",
+        "peekOfCode": "test_dataset = dataset[int(0.8 * len(dataset)):]\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\n# Generate all parameter combinations for both grid_1 and grid_2\ngrid_1 = ParameterGrid(param_grid_1)\ngrid_2 = ParameterGrid(param_grid_2)\n# Track the best model and performance\nbest_val_auc = 0\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n# Helper function to run a grid search for both grids",
+        "detail": "grid_search_GCN_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "train_loader",
+        "kind": 5,
+        "importPath": "grid_search_GCN_tox21",
+        "description": "grid_search_GCN_tox21",
+        "peekOfCode": "train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\n# Generate all parameter combinations for both grid_1 and grid_2\ngrid_1 = ParameterGrid(param_grid_1)\ngrid_2 = ParameterGrid(param_grid_2)\n# Track the best model and performance\nbest_val_auc = 0\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n# Helper function to run a grid search for both grids\ndef run_grid_search(grid, search_name):",
+        "detail": "grid_search_GCN_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "test_loader",
+        "kind": 5,
+        "importPath": "grid_search_GCN_tox21",
+        "description": "grid_search_GCN_tox21",
+        "peekOfCode": "test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\n# Generate all parameter combinations for both grid_1 and grid_2\ngrid_1 = ParameterGrid(param_grid_1)\ngrid_2 = ParameterGrid(param_grid_2)\n# Track the best model and performance\nbest_val_auc = 0\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n# Helper function to run a grid search for both grids\ndef run_grid_search(grid, search_name):\n    global best_params, best_val_auc",
+        "detail": "grid_search_GCN_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "grid_1",
+        "kind": 5,
+        "importPath": "grid_search_GCN_tox21",
+        "description": "grid_search_GCN_tox21",
+        "peekOfCode": "grid_1 = ParameterGrid(param_grid_1)\ngrid_2 = ParameterGrid(param_grid_2)\n# Track the best model and performance\nbest_val_auc = 0\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n# Helper function to run a grid search for both grids\ndef run_grid_search(grid, search_name):\n    global best_params, best_val_auc\n    best_metrics = None\n    for params in grid:",
+        "detail": "grid_search_GCN_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "grid_2",
+        "kind": 5,
+        "importPath": "grid_search_GCN_tox21",
+        "description": "grid_search_GCN_tox21",
+        "peekOfCode": "grid_2 = ParameterGrid(param_grid_2)\n# Track the best model and performance\nbest_val_auc = 0\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n# Helper function to run a grid search for both grids\ndef run_grid_search(grid, search_name):\n    global best_params, best_val_auc\n    best_metrics = None\n    for params in grid:\n        print(f\"Testing combination ({search_name}): {params}\")",
+        "detail": "grid_search_GCN_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "best_val_auc",
+        "kind": 5,
+        "importPath": "grid_search_GCN_tox21",
+        "description": "grid_search_GCN_tox21",
+        "peekOfCode": "best_val_auc = 0\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n# Helper function to run a grid search for both grids\ndef run_grid_search(grid, search_name):\n    global best_params, best_val_auc\n    best_metrics = None\n    for params in grid:\n        print(f\"Testing combination ({search_name}): {params}\")\n        if search_name == \"Grid 1\":  # Learning rate scheduler parameters\n            # Default model parameters for grid_1 search",
+        "detail": "grid_search_GCN_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "device",
+        "kind": 5,
+        "importPath": "grid_search_GCN_tox21",
+        "description": "grid_search_GCN_tox21",
+        "peekOfCode": "device = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n# Helper function to run a grid search for both grids\ndef run_grid_search(grid, search_name):\n    global best_params, best_val_auc\n    best_metrics = None\n    for params in grid:\n        print(f\"Testing combination ({search_name}): {params}\")\n        if search_name == \"Grid 1\":  # Learning rate scheduler parameters\n            # Default model parameters for grid_1 search\n            model = GCNTox21(",
+        "detail": "grid_search_GCN_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "results",
+        "kind": 5,
+        "importPath": "grid_search_GCN_tox21",
+        "description": "grid_search_GCN_tox21",
+        "peekOfCode": "results = {\n    'best_config_lr': best_params_1,\n    'best_metrics_lr': best_metrics_1,\n    'best_config_architecture': best_params_2,\n    'best_metrics_architecture': best_metrics_2\n}\nwith open('grid_search/grid_search_GCN_results.json', 'w') as f:\n    json.dump(results, f, indent=4)\nprint(\"Best configuration and metrics saved to grid_search_results.json.\")",
+        "detail": "grid_search_GCN_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "run_grid_search",
+        "kind": 2,
+        "importPath": "grid_search_NNConv_tox21",
+        "description": "grid_search_NNConv_tox21",
+        "peekOfCode": "def run_grid_search(grid, search_name):\n    best_params = None  \n    best_val_auc = 0 \n    best_metrics = None\n    for params in grid:\n        print(f\"Testing combination ({search_name}): {params}\")\n        if search_name == \"Grid 1\":  # Learning rate scheduler parameters\n            # Default model parameters for grid_1 search\n            model = GCNTox21NNConv(\n                dataset[0].num_node_features,",
+        "detail": "grid_search_NNConv_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "param_grid_1",
+        "kind": 5,
+        "importPath": "grid_search_NNConv_tox21",
+        "description": "grid_search_NNConv_tox21",
+        "peekOfCode": "param_grid_1 = {\n    'lr': [1e-4, 1e-3],\n    'factor': [0.1, 0.5],\n    'patience': [2, 5, 10],\n}\nparam_grid_2 = {\n    'hidden_dim': [64, 128, 256],\n    'num_heads': [2, 4, 8],\n    'num_layers': [3, 4, 5],\n    'dropout': [0.2, 0.3, 0.5]",
+        "detail": "grid_search_NNConv_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "param_grid_2",
+        "kind": 5,
+        "importPath": "grid_search_NNConv_tox21",
+        "description": "grid_search_NNConv_tox21",
+        "peekOfCode": "param_grid_2 = {\n    'hidden_dim': [64, 128, 256],\n    'num_heads': [2, 4, 8],\n    'num_layers': [3, 4, 5],\n    'dropout': [0.2, 0.3, 0.5]\n}\n# Setup and training\ndataset = MoleculeNet(root='data/TOX21', name='TOX21')\ntrain_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]",
+        "detail": "grid_search_NNConv_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "dataset",
+        "kind": 5,
+        "importPath": "grid_search_NNConv_tox21",
+        "description": "grid_search_NNConv_tox21",
+        "peekOfCode": "dataset = MoleculeNet(root='data/TOX21', name='TOX21')\ntrain_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\n# Generate all parameter combinations for both grid_1 and grid_2\ngrid_1 = ParameterGrid(param_grid_1)\ngrid_2 = ParameterGrid(param_grid_2)\n# Track the best model and performance\nbest_val_auc = 0",
+        "detail": "grid_search_NNConv_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "train_dataset",
+        "kind": 5,
+        "importPath": "grid_search_NNConv_tox21",
+        "description": "grid_search_NNConv_tox21",
+        "peekOfCode": "train_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\n# Generate all parameter combinations for both grid_1 and grid_2\ngrid_1 = ParameterGrid(param_grid_1)\ngrid_2 = ParameterGrid(param_grid_2)\n# Track the best model and performance\nbest_val_auc = 0\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")",
+        "detail": "grid_search_NNConv_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "test_dataset",
+        "kind": 5,
+        "importPath": "grid_search_NNConv_tox21",
+        "description": "grid_search_NNConv_tox21",
+        "peekOfCode": "test_dataset = dataset[int(0.8 * len(dataset)):]\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\n# Generate all parameter combinations for both grid_1 and grid_2\ngrid_1 = ParameterGrid(param_grid_1)\ngrid_2 = ParameterGrid(param_grid_2)\n# Track the best model and performance\nbest_val_auc = 0\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n# Helper function to run a grid search for both grids",
+        "detail": "grid_search_NNConv_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "train_loader",
+        "kind": 5,
+        "importPath": "grid_search_NNConv_tox21",
+        "description": "grid_search_NNConv_tox21",
+        "peekOfCode": "train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\n# Generate all parameter combinations for both grid_1 and grid_2\ngrid_1 = ParameterGrid(param_grid_1)\ngrid_2 = ParameterGrid(param_grid_2)\n# Track the best model and performance\nbest_val_auc = 0\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n# Helper function to run a grid search for both grids\ndef run_grid_search(grid, search_name):",
+        "detail": "grid_search_NNConv_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "test_loader",
+        "kind": 5,
+        "importPath": "grid_search_NNConv_tox21",
+        "description": "grid_search_NNConv_tox21",
+        "peekOfCode": "test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\n# Generate all parameter combinations for both grid_1 and grid_2\ngrid_1 = ParameterGrid(param_grid_1)\ngrid_2 = ParameterGrid(param_grid_2)\n# Track the best model and performance\nbest_val_auc = 0\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n# Helper function to run a grid search for both grids\ndef run_grid_search(grid, search_name):\n    best_params = None  ",
+        "detail": "grid_search_NNConv_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "grid_1",
+        "kind": 5,
+        "importPath": "grid_search_NNConv_tox21",
+        "description": "grid_search_NNConv_tox21",
+        "peekOfCode": "grid_1 = ParameterGrid(param_grid_1)\ngrid_2 = ParameterGrid(param_grid_2)\n# Track the best model and performance\nbest_val_auc = 0\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n# Helper function to run a grid search for both grids\ndef run_grid_search(grid, search_name):\n    best_params = None  \n    best_val_auc = 0 \n    best_metrics = None",
+        "detail": "grid_search_NNConv_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "grid_2",
+        "kind": 5,
+        "importPath": "grid_search_NNConv_tox21",
+        "description": "grid_search_NNConv_tox21",
+        "peekOfCode": "grid_2 = ParameterGrid(param_grid_2)\n# Track the best model and performance\nbest_val_auc = 0\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n# Helper function to run a grid search for both grids\ndef run_grid_search(grid, search_name):\n    best_params = None  \n    best_val_auc = 0 \n    best_metrics = None\n    for params in grid:",
+        "detail": "grid_search_NNConv_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "best_val_auc",
+        "kind": 5,
+        "importPath": "grid_search_NNConv_tox21",
+        "description": "grid_search_NNConv_tox21",
+        "peekOfCode": "best_val_auc = 0\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n# Helper function to run a grid search for both grids\ndef run_grid_search(grid, search_name):\n    best_params = None  \n    best_val_auc = 0 \n    best_metrics = None\n    for params in grid:\n        print(f\"Testing combination ({search_name}): {params}\")\n        if search_name == \"Grid 1\":  # Learning rate scheduler parameters",
+        "detail": "grid_search_NNConv_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "device",
+        "kind": 5,
+        "importPath": "grid_search_NNConv_tox21",
+        "description": "grid_search_NNConv_tox21",
+        "peekOfCode": "device = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n# Helper function to run a grid search for both grids\ndef run_grid_search(grid, search_name):\n    best_params = None  \n    best_val_auc = 0 \n    best_metrics = None\n    for params in grid:\n        print(f\"Testing combination ({search_name}): {params}\")\n        if search_name == \"Grid 1\":  # Learning rate scheduler parameters\n            # Default model parameters for grid_1 search",
+        "detail": "grid_search_NNConv_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "results",
+        "kind": 5,
+        "importPath": "grid_search_NNConv_tox21",
+        "description": "grid_search_NNConv_tox21",
+        "peekOfCode": "results = {\n    'best_config_lr': best_params_1,\n    'best_metrics_lr': best_metrics_1,\n    'best_config_architecture': best_params_2,\n    'best_metrics_architecture': best_metrics_2\n}\nwith open('grid_search/grid_search_NNConv_results.json', 'w') as f:\n    json.dump(results, f, indent=4)\nprint(\"Best configuration and metrics saved to grid_search_NNConv_results.json.\")",
+        "detail": "grid_search_NNConv_tox21",
+        "documentation": {}
+    },
+    {
+        "label": "run_grid_search",
+        "kind": 2,
+        "importPath": "grid_serch_GAT_tox_21",
+        "description": "grid_serch_GAT_tox_21",
+        "peekOfCode": "def run_grid_search(grid, search_name):\n    best_params = None  \n    best_val_auc = 0 \n    best_metrics = None\n    for params in grid:\n        print(f\"Testing combination ({search_name}): {params}\")\n        if search_name == \"Grid 1\":  # Learning rate scheduler parameters\n            # Default model parameters for grid_1 search\n            model = GATTox21(\n                dataset[0].num_node_features,",
+        "detail": "grid_serch_GAT_tox_21",
+        "documentation": {}
+    },
+    {
+        "label": "param_grid_1",
+        "kind": 5,
+        "importPath": "grid_serch_GAT_tox_21",
+        "description": "grid_serch_GAT_tox_21",
+        "peekOfCode": "param_grid_1 = {\n    'lr': [1e-4, 1e-3],\n    'factor': [0.1, 0.5],\n    'patience': [2, 5, 10],\n}\nparam_grid_2 = {\n    'hidden_dim': [64, 128, 256],\n    'num_heads': [2, 4, 8],\n    'num_layers': [3, 4, 5],\n    'dropout': [0.2, 0.3, 0.5]",
+        "detail": "grid_serch_GAT_tox_21",
+        "documentation": {}
+    },
+    {
+        "label": "param_grid_2",
+        "kind": 5,
+        "importPath": "grid_serch_GAT_tox_21",
+        "description": "grid_serch_GAT_tox_21",
+        "peekOfCode": "param_grid_2 = {\n    'hidden_dim': [64, 128, 256],\n    'num_heads': [2, 4, 8],\n    'num_layers': [3, 4, 5],\n    'dropout': [0.2, 0.3, 0.5]\n}\n# Setup and training\ndataset = MoleculeNet(root='data/TOX21', name='TOX21')\ntrain_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]",
+        "detail": "grid_serch_GAT_tox_21",
+        "documentation": {}
+    },
+    {
+        "label": "dataset",
+        "kind": 5,
+        "importPath": "grid_serch_GAT_tox_21",
+        "description": "grid_serch_GAT_tox_21",
+        "peekOfCode": "dataset = MoleculeNet(root='data/TOX21', name='TOX21')\ntrain_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\n# Generate all parameter combinations for both grid_1 and grid_2\ngrid_1 = ParameterGrid(param_grid_1)\ngrid_2 = ParameterGrid(param_grid_2)\n# Track the best model and performance\nbest_val_auc = 0",
+        "detail": "grid_serch_GAT_tox_21",
+        "documentation": {}
+    },
+    {
+        "label": "train_dataset",
+        "kind": 5,
+        "importPath": "grid_serch_GAT_tox_21",
+        "description": "grid_serch_GAT_tox_21",
+        "peekOfCode": "train_dataset = dataset[:int(0.8 * len(dataset))]\ntest_dataset = dataset[int(0.8 * len(dataset)):]\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\n# Generate all parameter combinations for both grid_1 and grid_2\ngrid_1 = ParameterGrid(param_grid_1)\ngrid_2 = ParameterGrid(param_grid_2)\n# Track the best model and performance\nbest_val_auc = 0\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")",
+        "detail": "grid_serch_GAT_tox_21",
+        "documentation": {}
+    },
+    {
+        "label": "test_dataset",
+        "kind": 5,
+        "importPath": "grid_serch_GAT_tox_21",
+        "description": "grid_serch_GAT_tox_21",
+        "peekOfCode": "test_dataset = dataset[int(0.8 * len(dataset)):]\ntrain_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\n# Generate all parameter combinations for both grid_1 and grid_2\ngrid_1 = ParameterGrid(param_grid_1)\ngrid_2 = ParameterGrid(param_grid_2)\n# Track the best model and performance\nbest_val_auc = 0\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n# Helper function to run a grid search for both grids",
+        "detail": "grid_serch_GAT_tox_21",
+        "documentation": {}
+    },
+    {
+        "label": "train_loader",
+        "kind": 5,
+        "importPath": "grid_serch_GAT_tox_21",
+        "description": "grid_serch_GAT_tox_21",
+        "peekOfCode": "train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)\ntest_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\n# Generate all parameter combinations for both grid_1 and grid_2\ngrid_1 = ParameterGrid(param_grid_1)\ngrid_2 = ParameterGrid(param_grid_2)\n# Track the best model and performance\nbest_val_auc = 0\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n# Helper function to run a grid search for both grids\ndef run_grid_search(grid, search_name):",
+        "detail": "grid_serch_GAT_tox_21",
+        "documentation": {}
+    },
+    {
+        "label": "test_loader",
+        "kind": 5,
+        "importPath": "grid_serch_GAT_tox_21",
+        "description": "grid_serch_GAT_tox_21",
+        "peekOfCode": "test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)\n# Generate all parameter combinations for both grid_1 and grid_2\ngrid_1 = ParameterGrid(param_grid_1)\ngrid_2 = ParameterGrid(param_grid_2)\n# Track the best model and performance\nbest_val_auc = 0\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n# Helper function to run a grid search for both grids\ndef run_grid_search(grid, search_name):\n    best_params = None  ",
+        "detail": "grid_serch_GAT_tox_21",
+        "documentation": {}
+    },
+    {
+        "label": "grid_1",
+        "kind": 5,
+        "importPath": "grid_serch_GAT_tox_21",
+        "description": "grid_serch_GAT_tox_21",
+        "peekOfCode": "grid_1 = ParameterGrid(param_grid_1)\ngrid_2 = ParameterGrid(param_grid_2)\n# Track the best model and performance\nbest_val_auc = 0\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n# Helper function to run a grid search for both grids\ndef run_grid_search(grid, search_name):\n    best_params = None  \n    best_val_auc = 0 \n    best_metrics = None",
+        "detail": "grid_serch_GAT_tox_21",
+        "documentation": {}
+    },
+    {
+        "label": "grid_2",
+        "kind": 5,
+        "importPath": "grid_serch_GAT_tox_21",
+        "description": "grid_serch_GAT_tox_21",
+        "peekOfCode": "grid_2 = ParameterGrid(param_grid_2)\n# Track the best model and performance\nbest_val_auc = 0\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n# Helper function to run a grid search for both grids\ndef run_grid_search(grid, search_name):\n    best_params = None  \n    best_val_auc = 0 \n    best_metrics = None\n    for params in grid:",
+        "detail": "grid_serch_GAT_tox_21",
+        "documentation": {}
+    },
+    {
+        "label": "best_val_auc",
+        "kind": 5,
+        "importPath": "grid_serch_GAT_tox_21",
+        "description": "grid_serch_GAT_tox_21",
+        "peekOfCode": "best_val_auc = 0\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n# Helper function to run a grid search for both grids\ndef run_grid_search(grid, search_name):\n    best_params = None  \n    best_val_auc = 0 \n    best_metrics = None\n    for params in grid:\n        print(f\"Testing combination ({search_name}): {params}\")\n        if search_name == \"Grid 1\":  # Learning rate scheduler parameters",
+        "detail": "grid_serch_GAT_tox_21",
+        "documentation": {}
+    },
+    {
+        "label": "device",
+        "kind": 5,
+        "importPath": "grid_serch_GAT_tox_21",
+        "description": "grid_serch_GAT_tox_21",
+        "peekOfCode": "device = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n# Helper function to run a grid search for both grids\ndef run_grid_search(grid, search_name):\n    best_params = None  \n    best_val_auc = 0 \n    best_metrics = None\n    for params in grid:\n        print(f\"Testing combination ({search_name}): {params}\")\n        if search_name == \"Grid 1\":  # Learning rate scheduler parameters\n            # Default model parameters for grid_1 search",
+        "detail": "grid_serch_GAT_tox_21",
+        "documentation": {}
+    },
+    {
+        "label": "results",
+        "kind": 5,
+        "importPath": "grid_serch_GAT_tox_21",
+        "description": "grid_serch_GAT_tox_21",
+        "peekOfCode": "results = {\n    'best_config_lr': best_params_1,\n    'best_metrics_lr': best_metrics_1,\n    'best_config_architecture': best_params_2,\n    'best_metrics_architecture': best_metrics_2\n}\nwith open('grid_search/grid_search_GAT_results.json', 'w') as f:\n    json.dump(results, f, indent=4)\nprint(\"Best configuration and metrics saved to grid_search_GAT_results.json.\")",
+        "detail": "grid_serch_GAT_tox_21",
         "documentation": {}
     },
     {
