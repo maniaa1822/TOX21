@@ -43,13 +43,14 @@ Each model predicts multiple toxicity endpoints using molecular features extract
 ### Methodology
 
 Our experimental pipeline consists of:
-1. Data preprocessing and cleaning
-2. Molecular feature extraction from SMILES notation
-3. Dataset stratification and scaling
-4. Model training and hyperparameter tuning
-5. Comprehensive performance evaluation across multiple metrics
+1. Data analysis
+2. Data preprocessing and cleaning
+3. Molecular feature extraction from SMILES notation
+4. Dataset stratification and scaling
+5. Model training and hyperparameter tuning
+6. Comprehensive performance evaluation across multiple metrics
 
-The results provide baseline performance metrics (see table below) against which future GNN implementations can be compared.
+The results provide baseline performance metrics (see table below).
 
 
 ### Baseline Performance Comparison
