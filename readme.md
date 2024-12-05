@@ -91,7 +91,7 @@ The table below summarizes the key hyperparameters used for each model in our ex
 
 ### Notes:
 - When a parameter is marked with a `-`, it means that the parameter is not applicable to the specific model then it was not included in the grid search optimization for that model.
-- the parameters for learning rate and the other parameters are trained separately in order to optiimized the computational time.
+- the parameters for learning rate and the other parameters are trained separately in order to optimized the computational time.
 
 ## Hyperparameters Table
 
