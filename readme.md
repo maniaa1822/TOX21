@@ -27,6 +27,16 @@ We employ several GNN architectures to predict the toxicity tasks in the TOX21 d
 
 Each model is trained to predict 12 different toxicity tasks, and we evaluate their performance using metrics such as accuracy, precision, recall, F1 score, and ROC-AUC.
 
+## Methodology
+
+Our experimental pipeline consists of:
+1. Data analysis
+2. Data preprocessing and cleaning
+3. Molecular feature extraction from SMILES notation
+4. Dataset stratification and scaling
+5. Model training and hyperparameter tuning
+6. Comprehensive performance evaluation across multiple metrics
+
 ## Baseline Methods
 
 To establish performance benchmarks before implementing more complex Graph Neural Networks (GNNs), we evaluated several classical machine learning approaches on the Tox21 dataset. These baseline models provide a foundation for comparing the effectiveness of more sophisticated architectures.
@@ -40,19 +50,9 @@ We developed three tree-based ensemble models:
 
 Each model predicts multiple toxicity endpoints using molecular features extracted from SMILES representations. For molecular featurization, we employed a bag-of-words encoding approach, which converts chemical structures into numerical vectors while preserving key molecular information.
 
-### Methodology
-
-Our experimental pipeline consists of:
-1. Data preprocessing and cleaning
-2. Molecular feature extraction from SMILES notation
-3. Dataset stratification and scaling
-4. Model training and hyperparameter tuning
-5. Comprehensive performance evaluation across multiple metrics
-
-The results provide baseline performance metrics (see table below) against which future GNN implementations can be compared.
-
-
 ### Baseline Performance Comparison
+
+The results provide baseline performance metrics (see table below).
 
 | Metric | Random Forest | XGBoost | Gradient Boosting |
 |--------|--------------|---------|------------------|
@@ -60,14 +60,10 @@ The results provide baseline performance metrics (see table below) against which
 | Recall | 9.27% | 18.01% | 20.71% |
 | F1 Score | 13.91% | 27.31% | 29.10% |
 | Accuracy | 92.70% | 93.12% | 92.91% |
-| Balanced Accuracy | 54.62% | 58.76% | 59.87% |
 | ROC AUC | 81.07% | 79.52% | 79.29% |
-| Average Precision | 40.77% | 41.06% | 36.91% |
 
-Key observations:
+
 - Random Forest achieves highest precision and ROC AUC
-- Gradient Boosting shows best recall and balanced accuracy
-- XGBoost provides best overall balance with highest accuracy and average precision
 
 ### Threshold Selection for Classification
 
@@ -95,12 +91,12 @@ The table below summarizes the key hyperparameters used for each model in our ex
 
 ## Hyperparameters Table
 
-| Models     | Factor | LR      | Min LR   | Patience | Threshold | Dropout | Hidden Dim | Num Heads | Num Layers | Edge Hidden |
-|-------------|--------|---------|----------|----------|-----------|---------|------------|-----------|------------|-------------|
-| **GAT**     | 0.5    | 0.001   | 1e-06    | 2        | 0.0001    | 0.2     | 64         | 8         | 4          | -           |
-| **NNConv**  | 0.5    | 0.001   | 1e-06    | 10       | 0.001     | 0.5     | 256        | 2         | 4          | -           |
-| **GCN_node**| 0.1    | 0.001   | 1e-05    | 10       | 0.0001    | 0.2     | 256        | -         | 3          | -           |
-| **GCN**     | 0.1    | 0.001   | 1e-05    | 2        | 0.001     | 0.2     | 256        | -         | 3          | 16          |
+| Models      | Factor |    LR   |  Min LR  | Patience | Threshold | Dropout | Hidden Dim | Num Heads | Num Layers | Edge Hidden |
+|-------------|:------:|:-------:|:--------:|:--------:|:---------:|:-------:|:----------:|:---------:|:----------:|:-----------:|
+| **GAT**     |   0.5  |  0.001  |  1e-06   |    2     |   0.0001  |   0.2   |     64     |     8     |     4      |      -      |
+| **NNConv**  |   0.5  |  0.001  |  1e-06   |   10     |   0.001   |   0.5   |    256     |     2     |     4      |      -      |
+| **GCN_node**|   0.1  |  0.001  |  1e-05   |   10     |   0.0001  |   0.2   |    256     |     -     |     3      |      -      |
+| **GCN**     |   0.1  |  0.001  |  1e-05   |    2     |   0.001   |   0.2   |    256     |     -     |     3      |     16      |
 
 
 ## Model Performance Results
@@ -108,12 +104,11 @@ The table below summarizes the key hyperparameters used for each model in our ex
 The following table summarizes the performance results of each model after optimizing the hyperparameters through grid search. This are the performance for the threshold for the best AUC.
 
 
-### Model Performance Table
-
-| Model       | Accuracy | Precision | Recall | F1     | AUC    | Loss   |
-|-------------|----------|-----------|--------|--------|--------|--------|
-| **GAT**     | 0.9349   | 0.6621    | 0.2674 | 0.3699 | 0.8328 | 0.2025 |
-| **GCN_node**| 0.9369   | 0.6124    | 0.3669 | 0.4536 | 0.8476 | 0.2029 |
-| **GCN**     | 0.9336   | 0.7343    | 0.1729 | 0.2686 | 0.8382 | 0.1994 |
-| **NNConv**  | 0.9363   | 0.6672    | 0.2977 | 0.4009 | 0.8462 | 0.1983 |
+| Metric      | GAT     | GCN_node | GCN     | NNConv  |
+|-------------|---------|----------|---------|---------|
+| Precision   | 66.21%  | 61.24%   | 73.43%  | 66.72%  |
+| Recall      | 26.74%  | 36.69%   | 17.29%  | 29.77%  |
+| F1 Score    | 36.99%  | 45.36%   | 26.86%  | 40.09%  |
+| Accuracy    | 93.49%  | 93.69%   | 93.36%  | 93.63%  |
+| ROC AUC     | 83.28%  | 84.76%   | 83.82%  | 84.62%  |
 
