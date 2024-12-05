@@ -91,12 +91,12 @@ The table below summarizes the key hyperparameters used for each model in our ex
 
 ## Hyperparameters Table
 
-| Models     | Factor | LR      | Min LR   | Patience | Threshold | Dropout | Hidden Dim | Num Heads | Num Layers | Edge Hidden |
-|-------------|--------|---------|----------|----------|-----------|---------|------------|-----------|------------|-------------|
-| **GAT**     | 0.5    | 0.001   | 1e-06    | 2        | 0.0001    | 0.2     | 64         | 8         | 4          | -           |
-| **NNConv**  | 0.5    | 0.001   | 1e-06    | 10       | 0.001     | 0.5     | 256        | 2         | 4          | -           |
-| **GCN_node**| 0.1    | 0.001   | 1e-05    | 10       | 0.0001    | 0.2     | 256        | -         | 3          | -           |
-| **GCN**     | 0.1    | 0.001   | 1e-05    | 2        | 0.001     | 0.2     | 256        | -         | 3          | 16          |
+| Models      | Factor |    LR   |  Min LR  | Patience | Threshold | Dropout | Hidden Dim | Num Heads | Num Layers | Edge Hidden |
+|-------------|:------:|:-------:|:--------:|:--------:|:---------:|:-------:|:----------:|:---------:|:----------:|:-----------:|
+| **GAT**     |   0.5  |  0.001  |  1e-06   |    2     |   0.0001  |   0.2   |     64     |     8     |     4      |      -      |
+| **NNConv**  |   0.5  |  0.001  |  1e-06   |   10     |   0.001   |   0.5   |    256     |     2     |     4      |      -      |
+| **GCN_node**|   0.1  |  0.001  |  1e-05   |   10     |   0.0001  |   0.2   |    256     |     -     |     3      |      -      |
+| **GCN**     |   0.1  |  0.001  |  1e-05   |    2     |   0.001   |   0.2   |    256     |     -     |     3      |     16      |
 
 
 ## Model Performance Results
