@@ -101,3 +101,19 @@ The table below summarizes the key hyperparameters used for each model in our ex
 | **NNConv**  | 0.5    | 0.001   | 1e-06    | 10       | 0.001     | 0.5     | 256        | 2         | 4          | -           |
 | **GCN_node**| 0.1    | 0.001   | 1e-05    | 10       | 0.0001    | 0.2     | 256        | -         | 3          | -           |
 | **GCN**     | 0.1    | 0.001   | 1e-05    | 2        | 0.001     | 0.2     | 256        | -         | 3          | 16          |
+
+
+## Model Performance Results
+
+The following table summarizes the performance results of each model after optimizing the hyperparameters through grid search. This are the performance for the threshold for the best AUC.
+
+
+### Model Performance Table
+
+| Model       | Accuracy | Precision | Recall | F1     | AUC    | Loss   |
+|-------------|----------|-----------|--------|--------|--------|--------|
+| **GAT**     | 0.9349   | 0.6621    | 0.2674 | 0.3699 | 0.8328 | 0.2025 |
+| **GCN_node**| 0.9369   | 0.6124    | 0.3669 | 0.4536 | 0.8476 | 0.2029 |
+| **GCN**     | 0.9336   | 0.7343    | 0.1729 | 0.2686 | 0.8382 | 0.1994 |
+| **NNConv**  | 0.9363   | 0.6672    | 0.2977 | 0.4009 | 0.8462 | 0.1983 |
+
