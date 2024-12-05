@@ -60,9 +60,7 @@ The results provide baseline performance metrics (see table below).
 | Recall | 9.27% | 18.01% | 20.71% |
 | F1 Score | 13.91% | 27.31% | 29.10% |
 | Accuracy | 92.70% | 93.12% | 92.91% |
-| Balanced Accuracy | 54.62% | 58.76% | 59.87% |
 | ROC AUC | 81.07% | 79.52% | 79.29% |
-| Average Precision | 40.77% | 41.06% | 36.91% |
 
 Key observations:
 - Random Forest achieves highest precision and ROC AUC
@@ -108,12 +106,11 @@ The table below summarizes the key hyperparameters used for each model in our ex
 The following table summarizes the performance results of each model after optimizing the hyperparameters through grid search. This are the performance for the threshold for the best AUC.
 
 
-### Model Performance Table
-
-| Model       | Accuracy | Precision | Recall | F1     | AUC    | Loss   |
-|-------------|----------|-----------|--------|--------|--------|--------|
-| **GAT**     | 0.9349   | 0.6621    | 0.2674 | 0.3699 | 0.8328 | 0.2025 |
-| **GCN_node**| 0.9369   | 0.6124    | 0.3669 | 0.4536 | 0.8476 | 0.2029 |
-| **GCN**     | 0.9336   | 0.7343    | 0.1729 | 0.2686 | 0.8382 | 0.1994 |
-| **NNConv**  | 0.9363   | 0.6672    | 0.2977 | 0.4009 | 0.8462 | 0.1983 |
+| Metric      | GAT     | GCN_node | GCN     | NNConv  |
+|-------------|---------|----------|---------|---------|
+| Accuracy    | 93.49%  | 93.69%   | 93.36%  | 93.63%  |
+| Precision   | 66.21%  | 61.24%   | 73.43%  | 66.72%  |
+| Recall      | 26.74%  | 36.69%   | 17.29%  | 29.77%  |
+| F1 Score    | 36.99%  | 45.36%   | 26.86%  | 40.09%  |
+| ROC AUC     | 83.28%  | 84.76%   | 83.82%  | 84.62%  |
 
