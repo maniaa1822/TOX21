@@ -23,7 +23,7 @@ We employ several GNN architectures to predict the toxicity tasks in the TOX21 d
 1. **GCN (Graph Convolutional Network)**: Utilizes graph convolutional layers to aggregate information from neighboring nodes.
 2. **GAT (Graph Attention Network)**: Employs attention mechanisms to weigh the importance of neighboring nodes.
 3. **NNConv (Neural Network Convolution)**: Uses neural networks to learn edge-specific filters for convolution.
-4. **EdgeConv (Edge Convolution)**: Applies convolution operations on edges to capture relationships between nodes.
+4. **GCN node (Edge Convolution)**: Applies convolution operations on edges to capture relationships between nodes.
 
 Each model is trained to predict 12 different toxicity tasks, and we evaluate their performance using metrics such as accuracy, precision, recall, F1 score, and ROC-AUC.
 
