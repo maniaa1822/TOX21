@@ -54,13 +54,13 @@ Each model predicts multiple toxicity endpoints using molecular features extract
 
 The results provide baseline performance metrics (see table below).
 
-| Metric | Random Forest | XGBoost | Gradient Boosting |
-|--------|--------------|---------|------------------|
-| Precision | 79.69% | 73.33% | 56.22% |
-| Recall | 9.27% | 18.01% | 20.71% |
-| F1 Score | 13.91% | 27.31% | 29.10% |
-| Accuracy | 92.70% | 93.12% | 92.91% |
-| ROC AUC | 81.07% | 79.52% | 79.29% |
+| Metric      | Random Forest | XGBoost | Gradient Boosting |
+|-------------|---------------|---------|-------------------|
+| Precision   | 0.7969        | 0.7333  | 0.5622            |
+| Recall      | 0.0927        | 0.1801  | 0.2071            |
+| F1 Score    | 0.1391        | 0.2731  | 0.2910            |
+| Accuracy    | 0.9270        | 0.9312  | 0.9291            |
+| ROC AUC     | 0.8107        | 0.7952  | 0.7929            |
 
 
 - Random Forest achieves highest precision and ROC AUC
@@ -104,42 +104,10 @@ The table below summarizes the key hyperparameters used for each model in our ex
 The following table summarizes the performance results of each model after optimizing the hyperparameters through grid search. This are the performance for the threshold for the best AUC.
 
 
-| Metric      | GAT     | GCN_node | GCN     | NNConv  |
-|-------------|---------|----------|---------|---------|
-| Precision   | 66.21%  | 61.24%   | 73.43%  | 66.72%  |
-| Recall      | 26.74%  | 36.69%   | 17.29%  | 29.77%  |
-| F1 Score    | 36.99%  | 45.36%   | 26.86%  | 40.09%  |
-| Accuracy    | 93.49%  | 93.69%   | 93.36%  | 93.63%  |
-| ROC AUC     | 83.28%  | 84.76%   | 83.82%  | 84.62%  |
-
-## final runs 
-
- GAT
-
-Validation metrics:
-  accuracy: 0.9404
-  precision: 0.6722
-  recall: 0.3519
-  f1: 0.4533
-  auc: 0.8623
-  loss: 0.1894
-
-GCN node 
-
-Validation metrics:
-    accuracy: 0.9380
-    precision: 0.6322
-    recall: 0.3629
-    f1: 0.4543
-    auc: 0.8492
-    loss: 0.2008
-
-GCN 
-
-Validation metrics:
-  accuracy: 0.9365
-  precision: 0.7319
-  recall: 0.2358
-  f1: 0.3475
-  auc: 0.8487
-  loss: 0.1933
+| Metric      | GAT    | GCN_node | GCN    | NNConv |
+|-------------|--------|----------|--------|--------|
+| Precision   | 0.6722 | 0.6322   | 0.7319 | 0.6672 |
+| Recall      | 0.3519 | 0.3629   | 0.2358 | 0.2977 |
+| F1 Score    | 0.4533 | 0.4543   | 0.3475 | 0.4009 |
+| Accuracy    | 0.9404 | 0.9380   | 0.9365 | 0.9363 |
+| ROC AUC     | 0.8623 | 0.8492   | 0.8487 | 0.8462 |
