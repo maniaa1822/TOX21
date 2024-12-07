@@ -1655,7 +1655,7 @@
         "kind": 5,
         "importPath": "model.GAT_tox21",
         "description": "model.GAT_tox21",
-        "peekOfCode": "current_time = datetime.datetime.now().strftime('%Y%m%d-%H%M%S')\nlog_dir = f'runs/GAT_Tox21_500_epochs{current_time}'\nwriter = SummaryWriter(log_dir)\ndef train(model, train_loader, optimizer, device, epoch):\n    model.train()\n    total_loss = 0\n    all_metrics = []\n    for batch_idx, data in enumerate(train_loader):\n        data = data.to(device)\n        data.x = data.x.float()",
+        "peekOfCode": "current_time = datetime.datetime.now().strftime('%Y%m%d-%H%M%S')\nlog_dir = f'runs/final_runs/GAT_Tox21{current_time}'\nwriter = SummaryWriter(log_dir)\ndef train(model, train_loader, optimizer, device, epoch):\n    model.train()\n    total_loss = 0\n    all_metrics = []\n    for batch_idx, data in enumerate(train_loader):\n        data = data.to(device)\n        data.x = data.x.float()",
         "detail": "model.GAT_tox21",
         "documentation": {}
     },
@@ -1664,7 +1664,7 @@
         "kind": 5,
         "importPath": "model.GAT_tox21",
         "description": "model.GAT_tox21",
-        "peekOfCode": "log_dir = f'runs/GAT_Tox21_500_epochs{current_time}'\nwriter = SummaryWriter(log_dir)\ndef train(model, train_loader, optimizer, device, epoch):\n    model.train()\n    total_loss = 0\n    all_metrics = []\n    for batch_idx, data in enumerate(train_loader):\n        data = data.to(device)\n        data.x = data.x.float()\n        data.edge_index = data.edge_index.long()",
+        "peekOfCode": "log_dir = f'runs/final_runs/GAT_Tox21{current_time}'\nwriter = SummaryWriter(log_dir)\ndef train(model, train_loader, optimizer, device, epoch):\n    model.train()\n    total_loss = 0\n    all_metrics = []\n    for batch_idx, data in enumerate(train_loader):\n        data = data.to(device)\n        data.x = data.x.float()\n        data.edge_index = data.edge_index.long()",
         "detail": "model.GAT_tox21",
         "documentation": {}
     },
@@ -1718,7 +1718,7 @@
         "kind": 5,
         "importPath": "model.GCN_node_tox21",
         "description": "model.GCN_node_tox21",
-        "peekOfCode": "current_time = datetime.datetime.now().strftime('%Y%m%d-%H%M%S')\nlog_dir = f'runs/GCN_node_tox21_{current_time}'\nwriter = SummaryWriter(log_dir)\ndef train(model, train_loader, optimizer, device, epoch):\n    model.train()\n    total_loss = 0\n    all_metrics = []\n    for batch_idx, data in enumerate(train_loader):\n        data = data.to(device)\n        data.x = data.x.float()",
+        "peekOfCode": "current_time = datetime.datetime.now().strftime('%Y%m%d-%H%M%S')\nlog_dir = f'runs/final runs/GCN_node_tox21_{current_time}'\nwriter = SummaryWriter(log_dir)\ndef train(model, train_loader, optimizer, device, epoch):\n    model.train()\n    total_loss = 0\n    all_metrics = []\n    for batch_idx, data in enumerate(train_loader):\n        data = data.to(device)\n        data.x = data.x.float()",
         "detail": "model.GCN_node_tox21",
         "documentation": {}
     },
@@ -1727,7 +1727,7 @@
         "kind": 5,
         "importPath": "model.GCN_node_tox21",
         "description": "model.GCN_node_tox21",
-        "peekOfCode": "log_dir = f'runs/GCN_node_tox21_{current_time}'\nwriter = SummaryWriter(log_dir)\ndef train(model, train_loader, optimizer, device, epoch):\n    model.train()\n    total_loss = 0\n    all_metrics = []\n    for batch_idx, data in enumerate(train_loader):\n        data = data.to(device)\n        data.x = data.x.float()\n        data.edge_index = data.edge_index.long()",
+        "peekOfCode": "log_dir = f'runs/final runs/GCN_node_tox21_{current_time}'\nwriter = SummaryWriter(log_dir)\ndef train(model, train_loader, optimizer, device, epoch):\n    model.train()\n    total_loss = 0\n    all_metrics = []\n    for batch_idx, data in enumerate(train_loader):\n        data = data.to(device)\n        data.x = data.x.float()\n        data.edge_index = data.edge_index.long()",
         "detail": "model.GCN_node_tox21",
         "documentation": {}
     },
@@ -1790,7 +1790,7 @@
         "kind": 5,
         "importPath": "model.GCN_tox21",
         "description": "model.GCN_tox21",
-        "peekOfCode": "current_time = datetime.datetime.now().strftime('%Y%m%d-%H%M%S')\nlog_dir = f'runs/GCN_tox21_{current_time}'\nwriter = SummaryWriter(log_dir)\ndef train(model, train_loader, optimizer, device, epoch):\n    model.train()\n    total_loss = 0\n    all_metrics = []\n    for batch_idx, data in enumerate(train_loader):\n        data = data.to(device)\n        data.x = data.x.float()",
+        "peekOfCode": "current_time = datetime.datetime.now().strftime('%Y%m%d-%H%M%S')\nlog_dir = f'runs/final_runs/GCN_tox21_{current_time}'\nwriter = SummaryWriter(log_dir)\ndef train(model, train_loader, optimizer, device, epoch):\n    model.train()\n    total_loss = 0\n    all_metrics = []\n    for batch_idx, data in enumerate(train_loader):\n        data = data.to(device)\n        data.x = data.x.float()",
         "detail": "model.GCN_tox21",
         "documentation": {}
     },
@@ -1799,7 +1799,7 @@
         "kind": 5,
         "importPath": "model.GCN_tox21",
         "description": "model.GCN_tox21",
-        "peekOfCode": "log_dir = f'runs/GCN_tox21_{current_time}'\nwriter = SummaryWriter(log_dir)\ndef train(model, train_loader, optimizer, device, epoch):\n    model.train()\n    total_loss = 0\n    all_metrics = []\n    for batch_idx, data in enumerate(train_loader):\n        data = data.to(device)\n        data.x = data.x.float()\n        data.edge_index = data.edge_index.long()",
+        "peekOfCode": "log_dir = f'runs/final_runs/GCN_tox21_{current_time}'\nwriter = SummaryWriter(log_dir)\ndef train(model, train_loader, optimizer, device, epoch):\n    model.train()\n    total_loss = 0\n    all_metrics = []\n    for batch_idx, data in enumerate(train_loader):\n        data = data.to(device)\n        data.x = data.x.float()\n        data.edge_index = data.edge_index.long()",
         "detail": "model.GCN_tox21",
         "documentation": {}
     },
@@ -1853,7 +1853,7 @@
         "kind": 5,
         "importPath": "model.NNConv_tox21",
         "description": "model.NNConv_tox21",
-        "peekOfCode": "current_time = datetime.datetime.now().strftime('%Y%m%d-%H%M%S')\nlog_dir = f'runs/NNConv_{current_time}'\nwriter = SummaryWriter(log_dir)\ndef train(model, train_loader, optimizer, device, epoch):\n    model.train()\n    total_loss = 0\n    all_metrics = []\n    for batch_idx, data in enumerate(train_loader):\n        data = data.to(device)\n        data.x = data.x.float()",
+        "peekOfCode": "current_time = datetime.datetime.now().strftime('%Y%m%d-%H%M%S')\nlog_dir = f'runs/final_runs/NNConv_{current_time}'\nwriter = SummaryWriter(log_dir)\ndef train(model, train_loader, optimizer, device, epoch):\n    model.train()\n    total_loss = 0\n    all_metrics = []\n    for batch_idx, data in enumerate(train_loader):\n        data = data.to(device)\n        data.x = data.x.float()",
         "detail": "model.NNConv_tox21",
         "documentation": {}
     },
@@ -1862,7 +1862,7 @@
         "kind": 5,
         "importPath": "model.NNConv_tox21",
         "description": "model.NNConv_tox21",
-        "peekOfCode": "log_dir = f'runs/NNConv_{current_time}'\nwriter = SummaryWriter(log_dir)\ndef train(model, train_loader, optimizer, device, epoch):\n    model.train()\n    total_loss = 0\n    all_metrics = []\n    for batch_idx, data in enumerate(train_loader):\n        data = data.to(device)\n        data.x = data.x.float()\n        data.edge_index = data.edge_index.long()",
+        "peekOfCode": "log_dir = f'runs/final_runs/NNConv_{current_time}'\nwriter = SummaryWriter(log_dir)\ndef train(model, train_loader, optimizer, device, epoch):\n    model.train()\n    total_loss = 0\n    all_metrics = []\n    for batch_idx, data in enumerate(train_loader):\n        data = data.to(device)\n        data.x = data.x.float()\n        data.edge_index = data.edge_index.long()",
         "detail": "model.NNConv_tox21",
         "documentation": {}
     },

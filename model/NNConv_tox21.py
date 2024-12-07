@@ -109,7 +109,7 @@ def calculate_metrics(y_true, y_pred, mask):
 
 # Create unique run name with timestamp
 current_time = datetime.datetime.now().strftime('%Y%m%d-%H%M%S')
-log_dir = f'runs/NNConv_{current_time}'
+log_dir = f'runs/final_runs/NNConv_{current_time}'
 writer = SummaryWriter(log_dir)
 
 def train(model, train_loader, optimizer, device, epoch):
@@ -206,7 +206,7 @@ def validate(model, val_loader, device, epoch):
 
 if __name__ == '__main__':
     # Load best hyperparameters from JSON
-    with open('grid_search/grid_search_NNConv_results.json', 'r') as f:
+    with open('grid search/results/grid_search_NNConv_results.json', 'r') as f:
         best_params = json.load(f)
     
     # Combine architecture and learning parameters

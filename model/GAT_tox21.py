@@ -86,7 +86,7 @@ def calculate_metrics(y_true, y_pred, mask):
 
 # Create unique run name with timestamp
 current_time = datetime.datetime.now().strftime('%Y%m%d-%H%M%S')
-log_dir = f'runs/GAT_Tox21_500_epochs{current_time}'
+log_dir = f'runs/final_runs/GAT_Tox21{current_time}'
 writer = SummaryWriter(log_dir)
 
 def train(model, train_loader, optimizer, device, epoch):
@@ -182,7 +182,7 @@ def validate(model, val_loader, device, epoch):
 
 if __name__ == '__main__':
     # Load best hyperparameters from JSON
-    with open('grid_search/grid_search_GAT_results.json', 'r') as f:
+    with open('grid search/results/grid_search_GAT_results.json', 'r') as f:
         best_params = json.load(f)
     
     # Combine architecture and learning parameters
@@ -249,7 +249,7 @@ if __name__ == '__main__':
         print(f"{i+1}. {task}: {description}")
 
     # Training loop
-    num_epochs = 10
+    num_epochs = 50
     best_val_auc = 0
     final_y_true, final_y_pred = None, None  # To store the last epoch's predictions
 

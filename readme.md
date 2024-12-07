@@ -112,3 +112,34 @@ The following table summarizes the performance results of each model after optim
 | Accuracy    | 93.49%  | 93.69%   | 93.36%  | 93.63%  |
 | ROC AUC     | 83.28%  | 84.76%   | 83.82%  | 84.62%  |
 
+## final runs 
+
+ GAT
+
+Validation metrics:
+  accuracy: 0.9404
+  precision: 0.6722
+  recall: 0.3519
+  f1: 0.4533
+  auc: 0.8623
+  loss: 0.1894
+
+GCN node 
+
+Validation metrics:
+    accuracy: 0.9380
+    precision: 0.6322
+    recall: 0.3629
+    f1: 0.4543
+    auc: 0.8492
+    loss: 0.2008
+
+GCN 
+
+Validation metrics:
+  accuracy: 0.9365
+  precision: 0.7319
+  recall: 0.2358
+  f1: 0.3475
+  auc: 0.8487
+  loss: 0.1933
